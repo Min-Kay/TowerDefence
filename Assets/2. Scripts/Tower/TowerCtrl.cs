@@ -9,10 +9,8 @@ public class TowerCtrl : MonoBehaviour
     public int upgradePhase = 1;
     public int killCount = 0;
 
-    [Header("Attack Object Prefab")]
-    public GameObject attackPrefab;
-
     [Header("Attack Info")]
+    public GameObject attackPrefab;
     public float attackDelay;
     public AttackMode mode;
    

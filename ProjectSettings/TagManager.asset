@@ -6,6 +6,9 @@ TagManager:
   tags:
   - AttackObject
   - Enemy
+  - Tile
+  - Canvas
+  - Tower
   layers:
   - Default
   - TransparentFX

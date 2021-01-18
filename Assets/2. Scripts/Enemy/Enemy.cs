@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy HP")]
-    public int initHP;
-    public int HP;
+    public float initHP;
+    public float HP;
 
     [Header("Damage Player")]
     [Tooltip("When an enemy reaches the end of a checkpoint, it damages the player by this power.")]
@@ -14,10 +14,18 @@ public class Enemy : MonoBehaviour
 
     public State state = State.MOVE;
 
+    [Header("Enemy HP UI")]
+    public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
+    
+    private Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
+
     private int wayPointCount;//이동경로 갯수
     private Transform[] wayPoints;//이동경로 정보
     private int currentIndex = 0;
     private Movement2D movement2D;
+
+    private Color color;
+    private SpriteRenderer spr;
 
     public enum State
     {
@@ -26,10 +34,13 @@ public class Enemy : MonoBehaviour
         DIE
     }
 
-    private void Start()
+    private void Awake()
     {
+        spr = GetComponent<SpriteRenderer>();
+        canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
         HP = initHP;
         Setup(GameManager.instance.wayPoints);
+        SpawnEnemyHPSlider();
     }
 
     private void Update()
@@ -115,7 +126,25 @@ public class Enemy : MonoBehaviour
                 collision.GetComponent<AttackObject>().fatherTower.GetComponent<TowerCtrl>().killCount++;
             }
             Destroy(collision.gameObject);
+            color = spr.color;
+            color.a = 0.4f;
+            spr.color = color;
+            Invoke("Damaged", 0.2f);
         }
     }
 
+    private void Damaged()
+    {
+        color.a = 1.0f;
+        spr.color = color;
+    }
+
+    private void SpawnEnemyHPSlider()
+    {
+        GameObject sliderClone = Instantiate(enemyHPSliderPrefab);
+        sliderClone.transform.SetParent(canvasTransform);
+        sliderClone.transform.localScale = Vector3.one;
+        sliderClone.GetComponent<SliderAutoPosition>().Setup(this.transform);
+        sliderClone.GetComponent<EnemyHPViewer>().Setup(this.GetComponent<Enemy>());
+    }
 }

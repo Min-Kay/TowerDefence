@@ -56,11 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\2. Scripts\UI\TowerSpawner.cs" />
     <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
+    <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
+    <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
     <Compile Include="Assets\2. Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Movement2D.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject.cs" />
+    <Compile Include="Assets\2. Scripts\UI\SliderAutoPosition.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Player.cs" />
+    <Compile Include="Assets\2. Scripts\Enemy\EnemyHPViewer.cs" />
+    <Compile Include="Assets\2. Scripts\UI\TowerSelect.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3. Assets\Five Seamless Tileable Ground Textures\read me.txt" />
@@ -723,6 +730,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+      <Project>{B6695CDF-4F04-63A2-8372-2BDF3450F515}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{A9DC59F3-E33C-9D26-D6C6-A7CCF3F6189C}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

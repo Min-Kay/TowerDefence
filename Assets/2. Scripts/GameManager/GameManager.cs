@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [Header("Game State")]
+    public bool isGameStart = false; 
     public bool isGameOver = false;
 
     [Header("Player")]
@@ -27,12 +28,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        StartCoroutine(SpawnEnemy());
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (playerHp <= 0)
         {
@@ -40,16 +39,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void GameStart()
+    {
+        if (!isGameStart)
+        {
+            isGameStart = true;
+            StartCoroutine(SpawnEnemy()); 
+        } 
+    }
+
     private IEnumerator SpawnEnemy()
     {
         while (!isGameOver)
         {
-            GameObject clone = Instantiate(enemyPrefab);
-            Enemy enemy = clone.GetComponent<Enemy>();
-
-            //enemy.Setup(wayPoints);
+            Instantiate(enemyPrefab);
 
             yield return new WaitForSeconds(spawnTime);
         }
     }
+  
 }
