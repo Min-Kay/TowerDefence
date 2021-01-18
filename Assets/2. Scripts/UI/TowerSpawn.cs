@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerSpawn : MonoBehaviour
 {
+    [Header("TowerSpawner Object")]
     public TowerSpawner towerSpawner;
 
     private Camera mainCamera;
