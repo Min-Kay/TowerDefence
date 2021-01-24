@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Enemy HP")]
+    [Header("Enemy State")]
+    public State state = State.MOVE;
     public float initHP;
     public float HP;
 
@@ -12,11 +13,10 @@ public class Enemy : MonoBehaviour
     [Tooltip("When an enemy reaches the end of a checkpoint, it damages the player by this power.")]
     public int attackPower;
 
-    public State state = State.MOVE;
-
-    [Header("Enemy HP UI")]
+    [Header("Enemy UI & Image Angle Offset")]
     public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
-    
+    public float angleOffset;
+
     private Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
 
     private int wayPointCount;//이동경로 갯수
@@ -105,8 +105,11 @@ public class Enemy : MonoBehaviour
             transform.position = wayPoints[currentIndex].position;
             currentIndex++;
 
-            Vector3 direction = (wayPoints[currentIndex].position - transform.position).normalized;
-            movement2D.MoveTo(direction);
+            Vector3 direction = wayPoints[currentIndex].position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + angleOffset));
+
+            movement2D.MoveTo(direction.normalized);
         }
         else
         {

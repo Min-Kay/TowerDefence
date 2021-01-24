@@ -123,11 +123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78694862833c4f24e94eccb78da6defc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   initHP: 50
   HP: 0
   attackPower: 12
-  state: 0
   enemyHPSliderPrefab: {fileID: 0}
+  angleOffset: -90
 --- !u!114 &2120943307824165550
 MonoBehaviour:
   m_ObjectHideFlags: 0
