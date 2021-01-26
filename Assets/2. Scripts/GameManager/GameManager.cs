@@ -7,15 +7,17 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [Header("Game State")]
+    public bool isGameStart = false; 
     public bool isGameOver = false;
 
     [Header("Player")]
     public int playerHp;
 
     [Header("Enemy Spawn")]
-    public GameObject enemyPrefab;
-    public float spawnTime;
+    //public GameObject enemyPrefab;
+    //public float spawnTime;
     public Transform[] wayPoints;
+    public Wave currentWave;//웨이브 표시
 
     private void Awake()
     {
@@ -27,12 +29,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        StartCoroutine(SpawnEnemy());
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (playerHp <= 0)
         {
@@ -40,16 +40,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void GameStart(Wave wave)
+    {
+        currentWave = wave;
+        if (!isGameStart)
+        {
+            isGameStart = true;
+            StartCoroutine(SpawnEnemy()); 
+        } 
+    }
+
     private IEnumerator SpawnEnemy()
     {
-        while (!isGameOver)
+        int spawnEnemyCount = 0;
+        while (!isGameOver && spawnEnemyCount < currentWave.maxEnemyCount)
         {
-            GameObject clone = Instantiate(enemyPrefab);
+            int enemyIndex = Random.Range(0, currentWave.enemyPrefabs.Length);
+            GameObject clone = Instantiate(currentWave.enemyPrefabs[enemyIndex]);
             Enemy enemy = clone.GetComponent<Enemy>();
-
-            //enemy.Setup(wayPoints);
-
-            yield return new WaitForSeconds(spawnTime);
+            
+            enemy.Setup(this, wayPoints);
+            spawnEnemyCount++;
+            yield return new WaitForSeconds(currentWave.spawnTime);
+            
         }
     }
+  
 }

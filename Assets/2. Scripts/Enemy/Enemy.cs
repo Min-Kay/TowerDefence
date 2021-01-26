@@ -5,8 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy HP")]
-    public int initHP;
-    public int HP;
+    public float initHP;
+    public float HP;
+    
 
     [Header("Damage Player")]
     [Tooltip("When an enemy reaches the end of a checkpoint, it damages the player by this power.")]
@@ -14,11 +15,22 @@ public class Enemy : MonoBehaviour
 
     public State state = State.MOVE;
 
+    [Header("Enemy HP UI")]
+    public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
+    
+    private Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
+
     private int wayPointCount;//이동경로 갯수
     private Transform[] wayPoints;//이동경로 정보
     private int currentIndex = 0;
     private Movement2D movement2D;
 
+    private Color color;
+    private SpriteRenderer spr;
+
+    [Header("playergold")]
+    public int gold;
+    private int playergold;
     public enum State
     {
         MOVE,
@@ -26,10 +38,15 @@ public class Enemy : MonoBehaviour
         DIE
     }
 
-    private void Start()
+    private void Awake()
     {
+        spr = GetComponent<SpriteRenderer>();
+        
+        
+        canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
         HP = initHP;
-        Setup(GameManager.instance.wayPoints);
+        //Setup(GameManager.instance.wayPoints);
+        SpawnEnemyHPSlider();
     }
 
     private void Update()
@@ -37,10 +54,11 @@ public class Enemy : MonoBehaviour
         if(HP<=0)
         {
             state = State.DIE;
+            
         }
     }
 
-    public void Setup(Transform[] wayPoints)
+    public void Setup(GameManager gameManager,Transform[] wayPoints)
     {
         movement2D = GetComponent<Movement2D>();
 
@@ -67,6 +85,8 @@ public class Enemy : MonoBehaviour
                     break;
                 case State.DIE:
                     Destroy(this.gameObject);
+                    playergold=Player.getInstance().getMoney();//사망시 플레이어에게 몬스터골드추가
+                    Player.getInstance().setMoney(playergold + gold);
                     break;
             }
             yield return null;
@@ -115,7 +135,27 @@ public class Enemy : MonoBehaviour
                 collision.GetComponent<AttackObject>().fatherTower.GetComponent<TowerCtrl>().killCount++;
             }
             Destroy(collision.gameObject);
+
+            //여기서 상태이상을 넣어야됨
+            color = spr.color;
+            color.a = 0.4f;
+            spr.color = color;
+            Invoke("Damaged", 0.2f);
         }
     }
 
+    private void Damaged()
+    {
+        color.a = 1.0f;
+        spr.color = color;
+    }
+
+    private void SpawnEnemyHPSlider()
+    {
+        GameObject sliderClone = Instantiate(enemyHPSliderPrefab);
+        sliderClone.transform.SetParent(canvasTransform);
+        sliderClone.transform.localScale = Vector3.one;
+        sliderClone.GetComponent<SliderAutoPosition>().Setup(this.transform);
+        sliderClone.GetComponent<EnemyHPViewer>().Setup(this.GetComponent<Enemy>());
+    }
 }
