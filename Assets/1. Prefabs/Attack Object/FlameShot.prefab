@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3010735959717362323}
   - component: {fileID: 9156903305216277798}
   - component: {fileID: 3933399827941827085}
-  - component: {fileID: 3755295330114871790}
+  - component: {fileID: -1799362893367360724}
   m_Layer: 0
   m_Name: FlameShot
   m_TagString: AttackObject
@@ -97,9 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2047c13750f13c419213569bbf1e5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/1. Prefabs/Attack Object/FlameShot.prefab
   targetEnemy: {fileID: 0}
   power: 10
   speed: 25
+=======
+  power: 10
+  speed: 25
+  angleOffset: -90
+  targetEnemy: {fileID: 0}
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f:Assets/1. Prefabs/Characters/Fireball.prefab
   fatherTower: {fileID: 0}
 --- !u!61 &3933399827941827085
 BoxCollider2D:
@@ -127,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0982227, y: 1.4154234}
   m_EdgeRadius: 0
---- !u!50 &3755295330114871790
+--- !u!50 &-1799362893367360724
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -135,14 +142,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7256776439630371686}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

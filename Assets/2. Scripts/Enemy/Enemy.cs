@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+<<<<<<< HEAD
     [Header("Enemy HP")]
     public float initHP;
     public float HP;
     
+=======
+    [Header("Enemy State")]
+    public State state = State.MOVE;
+    public float initHP;
+    public float HP;
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
 
     [Header("Damage Player")]
     [Tooltip("When an enemy reaches the end of a checkpoint, it damages the player by this power.")]
     public int attackPower;
 
-    public State state = State.MOVE;
+    [Header("Enemy UI & Image Angle Offset")]
+    public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
+    public float angleOffset;
+
+    private Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
 
     [Header("Enemy HP UI")]
     public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
@@ -28,9 +39,12 @@ public class Enemy : MonoBehaviour
     private Color color;
     private SpriteRenderer spr;
 
+<<<<<<< HEAD
     [Header("playergold")]
     public int gold;
     private int playergold;
+=======
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     public enum State
     {
         MOVE,
@@ -41,11 +55,17 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
+<<<<<<< HEAD
         
         
         canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
         HP = initHP;
         //Setup(GameManager.instance.wayPoints);
+=======
+        canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
+        HP = initHP;
+        Setup(GameManager.instance.wayPoints);
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
         SpawnEnemyHPSlider();
     }
 
@@ -114,8 +134,11 @@ public class Enemy : MonoBehaviour
             transform.position = wayPoints[currentIndex].position;
             currentIndex++;
 
-            Vector3 direction = (wayPoints[currentIndex].position - transform.position).normalized;
-            movement2D.MoveTo(direction);
+            Vector3 direction = wayPoints[currentIndex].position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + angleOffset));
+
+            movement2D.MoveTo(direction.normalized);
         }
         else
         {
@@ -135,8 +158,11 @@ public class Enemy : MonoBehaviour
                 collision.GetComponent<AttackObject>().fatherTower.GetComponent<TowerCtrl>().killCount++;
             }
             Destroy(collision.gameObject);
+<<<<<<< HEAD
 
             //여기서 상태이상을 넣어야됨
+=======
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
             color = spr.color;
             color.a = 0.4f;
             spr.color = color;

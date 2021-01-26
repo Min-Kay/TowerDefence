@@ -40,9 +40,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     public void GameStart(Wave wave)
     {
         currentWave = wave;
+=======
+    public void GameStart()
+    {
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
         if (!isGameStart)
         {
             isGameStart = true;
@@ -55,6 +60,7 @@ public class GameManager : MonoBehaviour
         int spawnEnemyCount = 0;
         while (!isGameOver && spawnEnemyCount < currentWave.maxEnemyCount)
         {
+<<<<<<< HEAD
             int enemyIndex = Random.Range(0, currentWave.enemyPrefabs.Length);
             GameObject clone = Instantiate(currentWave.enemyPrefabs[enemyIndex]);
             Enemy enemy = clone.GetComponent<Enemy>();
@@ -63,6 +69,11 @@ public class GameManager : MonoBehaviour
             spawnEnemyCount++;
             yield return new WaitForSeconds(currentWave.spawnTime);
             
+=======
+            Instantiate(enemyPrefab);
+
+            yield return new WaitForSeconds(spawnTime);
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
         }
     }
   

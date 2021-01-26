@@ -57,11 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\2. Scripts\UI\TowerSpawner.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\2. Scripts\UI\TowerSelect.cs" />
     <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
     <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
+=======
+    <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
+    <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
+    <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     <Compile Include="Assets\2. Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Movement2D.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Enemy.cs" />
@@ -69,7 +75,14 @@
     <Compile Include="Assets\2. Scripts\UI\SliderAutoPosition.cs" />
     <Compile Include="Assets\2. Scripts\Player\Player.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\EnemyHPViewer.cs" />
+<<<<<<< HEAD
     <None Include="Assets\3. Assets\Five Seamless Tileable Ground Textures\read me.txt" />
+=======
+    <Compile Include="Assets\2. Scripts\UI\TowerSelect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+     <None Include="Assets\3. Assets\Five Seamless Tileable Ground Textures\read me.txt" />
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -727,6 +740,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+<<<<<<< HEAD
       <Project>{9464CBF1-85BC-1BD7-4077-336965CB0AA4}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -735,6 +749,14 @@
       <Project>{F8BC1222-EDAD-EA25-4A06-43E774443977}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+=======
+      <Project>{B6695CDF-4F04-63A2-8372-2BDF3450F515}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{A9DC59F3-E33C-9D26-D6C6-A7CCF3F6189C}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

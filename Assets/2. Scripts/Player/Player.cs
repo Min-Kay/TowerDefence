@@ -18,7 +18,11 @@ public class Player : MonoBehaviour
         public static readonly Player instance = new Player();
     }
     
+<<<<<<< HEAD
     public static Player getInstance()
+=======
+    public Player getInstance()
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     {
         return PlayerHolder.instance;
     }

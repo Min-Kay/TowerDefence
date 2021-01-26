@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TowerSpawn : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+    [Header("TowerSpawner Object")]
+>>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     public TowerSpawner towerSpawner;
 
     private Camera mainCamera;
