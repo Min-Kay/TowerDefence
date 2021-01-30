@@ -5,8 +5,10 @@ using UnityEngine;
 public class TowerCtrl : MonoBehaviour
 {
     [Header("Tower Information")]
+    public string towerName;
     public int price;
     public int upgradePhase = 1;
+    public int upgradeCost;
     public int killCount = 0;
 
     [Header("Attack Info")]

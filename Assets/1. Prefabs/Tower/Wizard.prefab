@@ -96,8 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9e8d99eb32a514c95f0e765f72b9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: WIZARD
   price: 50
   upgradePhase: 1
+  upgradeCost: 50
   killCount: 0
   attackPrefab: {fileID: 103399498140453914, guid: 10b22f3a23c1262469cbdb054b6c4ed2, type: 3}
   attackDelay: 0.5

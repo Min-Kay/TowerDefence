@@ -122,8 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9e8d99eb32a514c95f0e765f72b9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: DRAGON
   price: 200
   upgradePhase: 1
+  upgradeCost: 100
   killCount: 0
   attackPrefab: {fileID: 7905252089126529574, guid: a7a6294f0997b2b41a180e5a981ea632, type: 3}
   attackDelay: 0.5

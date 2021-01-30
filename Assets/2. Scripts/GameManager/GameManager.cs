@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float spawnTime;
     public Transform[] wayPoints;
 
+    private TowerCtrl rayTargetTower = null;
+
     private void Awake()
     {
         if(instance == null)
@@ -57,5 +59,18 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(spawnTime);
         }
     }
+
+    public TowerCtrl targetTower
+    { 
+        get
+        {
+            return rayTargetTower;
+        }
+        set
+        {
+            rayTargetTower = value;
+        }
+    }
+
   
 }
