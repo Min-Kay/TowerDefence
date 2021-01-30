@@ -5501,11 +5501,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0
-<<<<<<< HEAD
   far clip plane: 1000
-=======
-  far clip plane: 11
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
   field of view: 60
   orthographic: 1
   orthographic size: 35
@@ -7394,15 +7390,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
       - m_Target: {fileID: 1370171314}
         m_TargetAssemblyTypeName: WaveSystem, Assembly-CSharp
         m_MethodName: StartWave
-=======
-      - m_Target: {fileID: 1370171313}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameStart
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12801,10 +12791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370171312}
   - component: {fileID: 1370171313}
-<<<<<<< HEAD
   - component: {fileID: 1370171314}
-=======
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12840,19 +12827,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameStart: 0
   isGameOver: 0
-<<<<<<< HEAD
   playerHp: 10000
-=======
-  playerHp: 100
-  enemyPrefab: {fileID: 3646794377236381316, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
-  spawnTime: 1
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
   wayPoints:
   - {fileID: 2017410400}
   - {fileID: 722108844}
   - {fileID: 1193227354}
   - {fileID: 1826393508}
-<<<<<<< HEAD
   currentWave:
     spawnTime: 0
     maxEnemyCount: 0
@@ -12883,8 +12863,6 @@ MonoBehaviour:
     enemyPrefabs:
     - {fileID: 159584483826650073, guid: 079bf175548bbed4e93d055547e4114f, type: 3}
   enemySpawner: {fileID: 1370171313}
-=======
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
 --- !u!4 &1371118859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4466327316256653813, guid: 1a923ae8e6a8a094e91f06675aa3fe3e, type: 3}
@@ -14395,13 +14373,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-<<<<<<< HEAD
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-=======
-  m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 10
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0

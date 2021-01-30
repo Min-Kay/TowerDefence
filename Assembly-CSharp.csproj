@@ -57,17 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\2. Scripts\UI\TowerSpawner.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\2. Scripts\UI\TowerSelect.cs" />
     <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
     <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
-=======
-    <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
-    <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
-    <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     <Compile Include="Assets\2. Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Movement2D.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Enemy.cs" />
@@ -75,14 +69,7 @@
     <Compile Include="Assets\2. Scripts\UI\SliderAutoPosition.cs" />
     <Compile Include="Assets\2. Scripts\Player\Player.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\EnemyHPViewer.cs" />
-<<<<<<< HEAD
     <None Include="Assets\3. Assets\Five Seamless Tileable Ground Textures\read me.txt" />
-=======
-    <Compile Include="Assets\2. Scripts\UI\TowerSelect.cs" />
-  </ItemGroup>
-  <ItemGroup>
-     <None Include="Assets\3. Assets\Five Seamless Tileable Ground Textures\read me.txt" />
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -306,7 +293,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -654,93 +641,92 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 2주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>C:/Users/kihyun2/Desktop/kihyun/타워디펜스 받아온파일/타워디펜스 3주차/TowerDefence (1)/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-<<<<<<< HEAD
       <Project>{9464CBF1-85BC-1BD7-4077-336965CB0AA4}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -749,14 +735,6 @@
       <Project>{F8BC1222-EDAD-EA25-4A06-43E774443977}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-=======
-      <Project>{B6695CDF-4F04-63A2-8372-2BDF3450F515}</Project>
-      <Name>Unity.2D.Tilemap.Extras</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{A9DC59F3-E33C-9D26-D6C6-A7CCF3F6189C}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
->>>>>>> 7c49708d9de75a40dfea46c0b874a4bbf732cb0f
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
