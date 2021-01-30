@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AttackObject : MonoBehaviour
 {
-    [Header("AttackObject Setting")]
+    [HideInInspector]
     public float power;
-    public float speed;
+
+    private float speed;
 
     [Header("Image Angle Offset")]
     public float angleOffset;
@@ -16,6 +17,12 @@ public class AttackObject : MonoBehaviour
 
     [HideInInspector]
     public GameObject fatherTower = null; //공격 매개체를 소환한 타워 
+
+    private void Start()
+    {
+        power = fatherTower.GetComponent<TowerCtrl>().power;
+        speed = fatherTower.GetComponent<TowerCtrl>().speed;
+    }
 
     void Update()
     {

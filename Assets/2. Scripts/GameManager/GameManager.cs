@@ -12,11 +12,16 @@ public class GameManager : MonoBehaviour
 
     [Header("Player")]
     public int playerHp;
+    public int playerMoney;
 
     [Header("Enemy Spawn")]
     public GameObject enemyPrefab;
     public float spawnTime;
     public Transform[] wayPoints;
+
+    [Header("UI Controll")]
+    public HpChanger hpPanel;
+    public MoneyChange moneyPanel;
 
     private TowerCtrl rayTargetTower = null;
 
@@ -35,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerHp <= 0)
+        if (Player.getInstance().getHp() <= 0)
         {
             isGameOver = true;
         }
@@ -45,6 +50,8 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameStart)
         {
+            moneyPanel.updateMoney();
+            UpdateHP();
             isGameStart = true;
             StartCoroutine(SpawnEnemy()); 
         } 
@@ -72,5 +79,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-  
+    public void UpdateHP()
+    {
+        hpPanel.updateHp(Player.getInstance().getHp());
+    }
+
+    public void UpdateMoney()
+    {
+        moneyPanel.updateMoney();
+    }
+
+
+
 }

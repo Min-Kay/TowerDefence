@@ -99,8 +99,11 @@ MonoBehaviour:
   towerName: DARK WIZARD
   price: 100
   upgradePhase: 1
+  maxUpgrade: 3
   upgradeCost: 200
   killCount: 0
+  power: 15
+  speed: 20
   attackPrefab: {fileID: 7256776439630371686, guid: f2c16245793a71741b236c30c2c5514c, type: 3}
   attackDelay: 0.5
   mode: 0

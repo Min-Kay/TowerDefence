@@ -99,8 +99,11 @@ MonoBehaviour:
   towerName: WIZARD
   price: 50
   upgradePhase: 1
+  maxUpgrade: 3
   upgradeCost: 50
   killCount: 0
+  power: 10
+  speed: 20
   attackPrefab: {fileID: 103399498140453914, guid: 10b22f3a23c1262469cbdb054b6c4ed2, type: 3}
   attackDelay: 0.5
   mode: 0

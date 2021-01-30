@@ -123,8 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2047c13750f13c419213569bbf1e5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 15
+  power: 10
   speed: 30
+  angleOffset: -90
   targetEnemy: {fileID: 0}
   fatherTower: {fileID: 0}
 --- !u!50 &-5800991867741229854

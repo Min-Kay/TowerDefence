@@ -8,6 +8,7 @@ public class TowerCtrl : MonoBehaviour
     public string towerName;
     public int price;
     public int upgradePhase = 1;
+    public int maxUpgrade = 3;
     public int upgradeCost;
     public int killCount = 0;
 
@@ -15,8 +16,8 @@ public class TowerCtrl : MonoBehaviour
     public GameObject attackPrefab;
     public float attackDelay;
     public AttackMode mode;
-   
-    [Header("Tower Distance")]
+    public float power;
+    public float speed;
     public float distance;
 
     //Enemy List
@@ -35,9 +36,14 @@ public class TowerCtrl : MonoBehaviour
         StartCoroutine(TowerAI());
     }
 
-    void upgradeTower()
+    public void UpgradeTower()
     {
-        upgradePhase++;
+        if (upgradePhase < maxUpgrade)
+        {
+            upgradePhase++;
+            upgradeCost *= 2;
+            power += 10;
+        }
     }
 
     IEnumerator TowerAI()

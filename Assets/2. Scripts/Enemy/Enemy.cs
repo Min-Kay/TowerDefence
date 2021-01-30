@@ -113,7 +113,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            GameManager.instance.playerHp -= attackPower;
+            Player.getInstance().damaged(attackPower);
+            GameManager.instance.UpdateHP();
             Destroy(this.gameObject);
         }
     }
