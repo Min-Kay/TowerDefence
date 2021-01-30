@@ -16,8 +16,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Enemy Spawn")]
     public GameObject enemyPrefab;
-    public float spawnTime;
+    //public float spawnTime;
     public Transform[] wayPoints;
+    public Wave currentWave;
 
     [Header("UI Controll")]
     public HpChanger hpPanel;
@@ -46,11 +47,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameStart()
+    public void GameStart(Wave wave)
     {
+        currentWave = wave;
         if (!isGameStart)
         {
-            moneyPanel.updateMoney();
+            UpdateMoney();
             UpdateHP();
             isGameStart = true;
             StartCoroutine(SpawnEnemy()); 
@@ -59,11 +61,17 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
-        while (!isGameOver)
+        int spawnEnemyCount = 0;
+        while (!isGameOver && spawnEnemyCount < currentWave.maxEnemyCount)
         {
-            Instantiate(enemyPrefab);
+            int enemyIndex = Random.Range(0, currentWave.enemyPrefabs.Length);
+            GameObject clone = Instantiate(currentWave.enemyPrefabs[enemyIndex]);
+            Enemy enemy = clone.GetComponent<Enemy>();
 
-            yield return new WaitForSeconds(spawnTime);
+            enemy.Setup(this, wayPoints);
+            spawnEnemyCount++;
+            yield return new WaitForSeconds(currentWave.spawnTime);
+
         }
     }
 

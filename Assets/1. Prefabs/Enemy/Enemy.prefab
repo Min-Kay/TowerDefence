@@ -117,6 +117,7 @@ MonoBehaviour:
   attackPower: 10
   enemyHPSliderPrefab: {fileID: 6702318059884948026, guid: 62db1e0120480024aa3f066a65261fbe, type: 3}
   angleOffset: -90
+  gold: 10
 --- !u!61 &3518654415346746688
 BoxCollider2D:
   m_ObjectHideFlags: 0

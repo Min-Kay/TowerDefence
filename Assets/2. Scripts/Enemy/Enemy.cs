@@ -27,6 +27,9 @@ public class Enemy : MonoBehaviour
     private Color color;
     private SpriteRenderer spr;
 
+    [Header("Enemy Gold")]
+    public int gold;
+
     public enum State
     {
         MOVE,
@@ -39,7 +42,6 @@ public class Enemy : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
         canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
         HP = initHP;
-        Setup(GameManager.instance.wayPoints);
         SpawnEnemyHPSlider();
     }
 
@@ -51,7 +53,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Setup(Transform[] wayPoints)
+    public void Setup(GameManager gameManager, Transform[] wayPoints)
     {
         movement2D = GetComponent<Movement2D>();
 
@@ -72,12 +74,13 @@ public class Enemy : MonoBehaviour
             switch (state) 
             {
                 case State.MOVE:
-                    //NextMoveTo();
                     break;
                 case State.STOP:
                     break;
                 case State.DIE:
                     Destroy(this.gameObject);
+                    Player.getInstance().ChangeMoney(gold);
+                    GameManager.instance.UpdateMoney();
                     break;
             }
             yield return null;
