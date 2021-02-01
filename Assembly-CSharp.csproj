@@ -61,6 +61,7 @@
     <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
     <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
+    <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
     <Compile Include="Assets\3. Assets\Saurabh Studio\Ex Scene\CreateObj.cs" />
     <Compile Include="Assets\2. Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Movement2D.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="Assets\2. Scripts\Player\Player.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\EnemyHPViewer.cs" />
     <Compile Include="Assets\2. Scripts\Common\MoneyChange.cs" />
-    <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\TowerBaseCtrl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3. Assets\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />

@@ -5,10 +5,18 @@ using UnityEngine.UI;
 
 public class UiCtrl : MonoBehaviour
 {
+    [Header("Sound")]
+    public AudioListener audioListener;
+    public Image soundButton;
+    public Sprite soundOn;
+    public Sprite soundOff;
+    private bool isSoundOff = false;
+
 
     [Header("Tower Canvas")]
     public Canvas towerUi;
     public Canvas towerMenu;
+    public Canvas option;
 
     private TowerCtrl tower;
     private bool isUiActive;
@@ -44,6 +52,7 @@ public class UiCtrl : MonoBehaviour
     public void ShowTowerUi()
     {
         towerMenu.gameObject.SetActive(false);
+        option.gameObject.SetActive(false);
         towerUi.gameObject.SetActive(true);
         isUiActive = true;
     }
@@ -51,7 +60,16 @@ public class UiCtrl : MonoBehaviour
     public void ShowTowerMenu()
     {
         towerUi.gameObject.SetActive(false);
+        option.gameObject.SetActive(false);
         towerMenu.gameObject.SetActive(true);
+        isUiActive = false;
+    }
+
+    public void ShowOption()
+    {
+        towerUi.gameObject.SetActive(false);
+        towerMenu.gameObject.SetActive(false);
+        option.gameObject.SetActive(true);
         isUiActive = false;
     }
 
@@ -87,7 +105,7 @@ public class UiCtrl : MonoBehaviour
 
     public void UpgradeButton()
     {
-        if (tower.upgradeCost <= Player.getInstance().getMoney())
+        if (tower.upgradeCost <= Player.getInstance().getMoney() && tower.upgradePhase < tower.maxUpgrade)
         {
             Player.getInstance().ChangeMoney(-tower.upgradeCost);
             GameManager.instance.UpdateMoney();
@@ -103,4 +121,29 @@ public class UiCtrl : MonoBehaviour
         Destroy(tower.gameObject);
     }
 
+    public void SoundButton()
+    {
+        if(isSoundOff)
+        {
+            isSoundOff = false;
+            soundButton.sprite = soundOn;
+            audioListener.enabled = true;
+        }
+        else if(!isSoundOff)
+        {
+            isSoundOff = true;
+            soundButton.sprite = soundOff;
+            audioListener.enabled = false;
+        }
+    }
+
+    public void RestartButton()
+    {
+
+    }
+
+    public void ExitButton()
+    {
+
+    }
 }
