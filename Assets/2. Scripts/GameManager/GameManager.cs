@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Game State")]
     public bool isGameStart = false; 
     public bool isGameOver = false;
+    public bool isGameClear = false; 
 
     [Header("Player")]
     public int playerHp;
@@ -35,8 +36,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        wavesystem = GetComponent<WaveSystem>();
-        MaxWaveCount = wavesystem.waves.Length;//최대웨이스추가
         if (instance == null)
         {
             instance = this;
@@ -45,7 +44,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        wavesystem = GetComponent<WaveSystem>();
+        MaxWaveCount = wavesystem.waves.Length;//최대웨이브 추가
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     private void FixedUpdate()
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         if (Player.getInstance().getHp() <= 0)
         {
             isGameOver = true;
+            Time.timeScale = 0;
         }
     }
 

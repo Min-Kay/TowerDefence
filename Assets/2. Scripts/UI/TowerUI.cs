@@ -13,8 +13,8 @@ public class TowerUI : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            CastRay();
+          if (Input.GetMouseButtonDown(0) && !GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
+                CastRay();
     }
 
     void CastRay()

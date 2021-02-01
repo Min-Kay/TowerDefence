@@ -21,6 +21,9 @@ public class TowerSelect : MonoBehaviour
 
     public void TowerButtonClick()
     {
-        towerSpawn.GetComponent<TowerSpawn>().currentTower = tower;
+        if (!GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
+        {
+            towerSpawn.GetComponent<TowerSpawn>().currentTower = tower;
+        }
     }
 }
