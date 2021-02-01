@@ -79,6 +79,7 @@ public class Enemy : MonoBehaviour
                     break;
                 case State.DIE:
                     Destroy(this.gameObject);
+                    GameManager.instance.currentEnemyCount--;
                     Player.getInstance().ChangeMoney(gold);
                     GameManager.instance.UpdateMoney();
                     break;
@@ -116,6 +117,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            GameManager.instance.currentEnemyCount--;
             Player.getInstance().damaged(attackPower);
             GameManager.instance.UpdateHP();
             Destroy(this.gameObject);

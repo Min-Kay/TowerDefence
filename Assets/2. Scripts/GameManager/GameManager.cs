@@ -24,11 +24,20 @@ public class GameManager : MonoBehaviour
     public HpChanger hpPanel;
     public MoneyChange moneyPanel;
 
+    [Header("Wave")]
+    public int MaxWaveCount;//최대 웨이브수
+    public int WaveCount = 0;//몇 웨이브
+    public int currentEnemyCount;//현재 남은적수
+
+    private WaveSystem wavesystem;
+
     private TowerCtrl rayTargetTower = null;
 
     private void Awake()
     {
-        if(instance == null)
+        wavesystem = GetComponent<WaveSystem>();
+        MaxWaveCount = wavesystem.waves.Length;//최대웨이스추가
+        if (instance == null)
         {
             instance = this;
         }    
@@ -55,6 +64,7 @@ public class GameManager : MonoBehaviour
             UpdateMoney();
             UpdateHP();
             isGameStart = true;
+            WaveCount++;
             StartCoroutine(SpawnEnemy()); 
         } 
     }
@@ -70,6 +80,7 @@ public class GameManager : MonoBehaviour
 
             enemy.Setup(this, wayPoints);
             spawnEnemyCount++;
+            currentEnemyCount++;//적 생성시 count추가
             yield return new WaitForSeconds(currentWave.spawnTime);
 
         }
