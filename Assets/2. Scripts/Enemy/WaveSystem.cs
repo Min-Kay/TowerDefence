@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaveSystem : MonoBehaviour
 {
     [SerializeField]
-    private Wave[] waves;
+    public Wave[] waves;
     [SerializeField]
     private GameManager enemySpawner;
     private int currentWaveIndex = -1;

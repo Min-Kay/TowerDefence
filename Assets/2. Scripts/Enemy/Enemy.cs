@@ -82,9 +82,11 @@ public class Enemy : MonoBehaviour
                     //NextMoveTo();
                     break;
                 case State.STOP:
+                    //몇초뒤에 다시 MOVE할지 조건필요 freeze 함수써서 invoke로 다시 StartCoroutine(OnMove());
                     break;
                 case State.DIE:
                     Destroy(this.gameObject);
+                    GameManager.instance.currentEnemyCount--;//사망시 count 감소
                     playergold=Player.getInstance().getMoney();//사망시 플레이어에게 몬스터골드추가
                     Player.getInstance().setMoney(playergold + gold);
                     break;
@@ -126,7 +128,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        bool freeze = false;
         if(collision.tag == "AttackObject" && collision.GetComponent<AttackObject>().targetEnemy == this.gameObject)
         {
             HP -= collision.GetComponent<AttackObject>().power;
@@ -137,14 +139,27 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
 
             //여기서 상태이상을 넣어야됨
-            color = spr.color;
-            color.a = 0.4f;
-            spr.color = color;
-            Invoke("Damaged", 0.2f);
+            if(!freeze)
+            {
+                color = spr.color;
+                color.a = 0.4f;
+                spr.color = color;
+                Invoke("Damaged", 0.2f);
+            }
+            else
+            {
+                state = State.STOP;
+            }
         }
     }
 
     private void Damaged()
+    {
+        color.a = 1.0f;
+        spr.color = color;
+    }
+
+    private void freezed()
     {
         color.a = 1.0f;
         spr.color = color;

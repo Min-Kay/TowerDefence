@@ -17,11 +17,20 @@ public class GameManager : MonoBehaviour
     //public GameObject enemyPrefab;
     //public float spawnTime;
     public Transform[] wayPoints;
+
+    [Header("Wave")]
+    public int MaxWaveCount;//최대 웨이브수
+    public int WaveCount=0;//몇 웨이브
+    public int currentEnemyCount;//현재 남은적수
     public Wave currentWave;//웨이브 표시
 
+    private WaveSystem wavesystem;
+    
     private void Awake()
     {
-        if(instance == null)
+        wavesystem = GetComponent<WaveSystem>();
+        MaxWaveCount=wavesystem.waves.Length;//최대웨이스추가
+        if (instance == null)
         {
             instance = this;
         }    
@@ -46,6 +55,7 @@ public class GameManager : MonoBehaviour
         if (!isGameStart)
         {
             isGameStart = true;
+            WaveCount++;
             StartCoroutine(SpawnEnemy()); 
         } 
     }
@@ -61,6 +71,7 @@ public class GameManager : MonoBehaviour
             
             enemy.Setup(this, wayPoints);
             spawnEnemyCount++;
+            currentEnemyCount++;//적 생성시 count추가
             yield return new WaitForSeconds(currentWave.spawnTime);
             
         }
