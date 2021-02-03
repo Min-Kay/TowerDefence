@@ -24,6 +24,18 @@ public class TowerBaseCtrl : MonoBehaviour
     protected GameObject[] enemys = null;
     protected GameObject target;
 
+    [Header("Skill 1 Info")]
+    public string skill1Name;
+    public float skill1Delay;
+    [TextArea]
+    public string skill1Tooltip;
+
+    [Header("Skill 2 Info")]
+    public string skill2Name;
+    public float skill2Delay;
+    [TextArea]
+    public string skill2Tooltip;
+
     public enum AttackMode 
     {
         FirstTarget,

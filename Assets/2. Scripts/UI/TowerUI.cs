@@ -13,8 +13,8 @@ public class TowerUI : MonoBehaviour
 
     void Update()
     {
-          if (Input.GetMouseButtonDown(0) && !GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
-                CastRay();
+        if (Input.GetMouseButtonDown(0) && !GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
+            CastRay();
     }
 
     void CastRay()
@@ -26,6 +26,16 @@ public class TowerUI : MonoBehaviour
         {
             GameManager.instance.targetTower = hit.transform.GetComponent<TowerCtrl>();
             ui.ShowTowerUi();
+        }
+        
+        if (hit && hit.transform.tag == "Skill1")
+        {
+            
+        }
+        
+        if (hit && hit.transform.tag == "Skill2")
+        {
+            
         }
     }
 }

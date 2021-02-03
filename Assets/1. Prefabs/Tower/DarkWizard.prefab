@@ -102,12 +102,18 @@ MonoBehaviour:
   maxUpgrade: 3
   upgradeCost: 200
   killCount: 0
-  power: 15
-  speed: 20
   attackPrefab: {fileID: 7256776439630371686, guid: f2c16245793a71741b236c30c2c5514c, type: 3}
   attackDelay: 0.5
   mode: 0
+  power: 15
+  speed: 20
   distance: 10
+  skill1Name: Null
+  skill1Delay: 0
+  skill1Tooltip: Null
+  skill2Name: Null
+  skill2Delay: 0
+  skill2Tooltip: Null
 --- !u!61 &-3167317260168394001
 BoxCollider2D:
   m_ObjectHideFlags: 0
