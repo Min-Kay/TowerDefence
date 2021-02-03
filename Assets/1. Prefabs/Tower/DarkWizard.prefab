@@ -108,12 +108,14 @@ MonoBehaviour:
   power: 15
   speed: 20
   distance: 10
-  skill1Name: Null
+  skill1Name: None
+  skill1Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
   skill1Delay: 0
-  skill1Tooltip: Null
-  skill2Name: Null
+  skill1Tooltip: None
+  skill2Name: None
+  skill2Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
   skill2Delay: 0
-  skill2Tooltip: Null
+  skill2Tooltip: None
 --- !u!61 &-3167317260168394001
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -27,15 +27,5 @@ public class TowerUI : MonoBehaviour
             GameManager.instance.targetTower = hit.transform.GetComponent<TowerCtrl>();
             ui.ShowTowerUi();
         }
-        
-        if (hit && hit.transform.tag == "Skill1")
-        {
-            
-        }
-        
-        if (hit && hit.transform.tag == "Skill2")
-        {
-            
-        }
     }
 }

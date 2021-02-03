@@ -108,12 +108,14 @@ MonoBehaviour:
   power: 10
   speed: 20
   distance: 10
-  skill1Name: PowerAttack
-  skill1Delay: 10
-  skill1Tooltip: Skill No.1
-  skill2Name: SlowPortion
-  skill2Delay: 12
-  skill2Tooltip: Skill No.2
+  skill1Name: None
+  skill1Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
+  skill1Delay: 0
+  skill1Tooltip: None
+  skill2Name: None
+  skill2Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
+  skill2Delay: 0
+  skill2Tooltip: None
 --- !u!61 &5537136280309127537
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -26,12 +26,14 @@ public class TowerBaseCtrl : MonoBehaviour
 
     [Header("Skill 1 Info")]
     public string skill1Name;
+    public Sprite skill1Sprite;
     public float skill1Delay;
     [TextArea]
     public string skill1Tooltip;
 
     [Header("Skill 2 Info")]
     public string skill2Name;
+    public Sprite skill2Sprite;
     public float skill2Delay;
     [TextArea]
     public string skill2Tooltip;

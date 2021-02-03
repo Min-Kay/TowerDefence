@@ -134,9 +134,15 @@ MonoBehaviour:
   power: 30
   speed: 15
   distance: 15
-  skill1Name: Null
-  skill1Delay: 0
-  skill1Tooltip: Null
-  skill2Name: Null
+  skill1Name: Dragon's Breath
+  skill1Sprite: {fileID: 21300000, guid: 073b32417b155d145a483aae6b2b5e0b, type: 3}
+  skill1Delay: 30
+  skill1Tooltip: 'Dragon makes a big breath
+
+    Cooldown : 30s
+
+    Distance : 5m'
+  skill2Name: None
+  skill2Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
   skill2Delay: 0
-  skill2Tooltip: Null
+  skill2Tooltip: None

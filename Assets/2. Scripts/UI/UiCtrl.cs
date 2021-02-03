@@ -36,6 +36,8 @@ public class UiCtrl : MonoBehaviour
     public Text attackPower;
     public Text killCount;
     public Text mode;
+    public Image skill1 = null;
+    public Image skill2 = null;
 
     private int gameSpeed = 1;
 
@@ -120,6 +122,8 @@ public class UiCtrl : MonoBehaviour
         attackPower.text = "Power : " + tower.GetComponent<TowerCtrl>().power;
         killCount.text = "Kill Count : " + tower.killCount;
         mode.text = tower.mode.ToString();
+        skill1.sprite = tower.skill1Sprite;
+        skill2.sprite = tower.skill2Sprite;
     }
 
     public void ChangeTowerMode()
