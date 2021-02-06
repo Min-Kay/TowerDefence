@@ -8,6 +8,7 @@ public class TowerCtrl : TowerBaseCtrl
     void Start()
     {
         StartCoroutine(TowerAI());
+        StartCoroutine(ActiveSkill());
     }
 
     public override void UpgradeTower()
@@ -97,6 +98,20 @@ public class TowerCtrl : TowerBaseCtrl
             var attackObject = Instantiate(attackPrefab, transform.position, transform.rotation);
             attackObject.GetComponent<AttackObject>().fatherTower = this.gameObject;
             attackObject.GetComponent<AttackObject>().targetEnemy = target;
+        }
+    }
+
+    private IEnumerator ActiveSkill()
+    {
+        ActiveSkill2();
+        yield return new WaitForSeconds(skill2Delay);
+    }
+
+    protected override void ActiveSkill2()
+    {
+        if(target != null)
+        {
+
         }
     }
 }

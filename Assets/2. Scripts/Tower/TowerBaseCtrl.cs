@@ -51,10 +51,10 @@ public class TowerBaseCtrl : MonoBehaviour
 
     protected virtual void SetFirstTarget() { }
 
-
     protected virtual void SetStrongestTarget() { } 
 
-
+    protected virtual void ActiveSkill1() { }
+    protected virtual void ActiveSkill2() { }
 
 
 }
