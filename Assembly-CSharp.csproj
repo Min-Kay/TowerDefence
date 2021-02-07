@@ -59,9 +59,11 @@
     <Compile Include="Assets\2. Scripts\UI\TowerSpawner.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerSelect.cs" />
     <Compile Include="Assets\2. Scripts\Tower\TowerCtrl.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\DragonTower.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
     <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
+    <Compile Include="Assets\2. Scripts\UI\TooltipCtrl.cs" />
     <Compile Include="Assets\3. Assets\Saurabh Studio\Ex Scene\CreateObj.cs" />
     <Compile Include="Assets\2. Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\2. Scripts\Tower\TowerBaseCtrl.cs" />
@@ -71,13 +73,14 @@
     <Compile Include="Assets\2. Scripts\UI\TowerUI.cs" />
     <Compile Include="Assets\2. Scripts\Common\HpChanger.cs" />
     <Compile Include="Assets\3. Assets\Saurabh Studio\Ex Scene\SS.cs" />
-    <Compile Include="Assets\2. Scripts\Tower\AttackObject.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\AttackObject\AttackObject.cs" />
     <Compile Include="Assets\2. Scripts\UI\SliderAutoPosition.cs" />
     <Compile Include="Assets\2. Scripts\Player\Player.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\EnemyHPViewer.cs" />
     <Compile Include="Assets\2. Scripts\Common\MoneyChange.cs" />
-    <Compile Include="Assets\2. Scripts\UI\TooltipCtrl.cs" />
-    <Compile Include="Assets\2. Scripts\Tower\DragonTower.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonAttackObject.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\AttackObject\BurnDamage.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonBreath.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3. Assets\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />

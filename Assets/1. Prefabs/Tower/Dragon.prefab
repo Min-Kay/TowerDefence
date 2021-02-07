@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7202568162407660413}
   - component: {fileID: 8815959192119062201}
   - component: {fileID: -6442398871637535858}
-  - component: {fileID: 2869570111861485778}
+  - component: {fileID: 8477754684897085826}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Tower
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
---- !u!114 &2869570111861485778
+--- !u!114 &8477754684897085826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,30 +119,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 8099606755935334256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac9e8d99eb32a514c95f0e765f72b9c0, type: 3}
+  m_Script: {fileID: 11500000, guid: c22012a855dc25840a2cb572405ca917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerName: DRAGON
-  price: 200
+  towerName: Dragon
+  price: 1
   upgradePhase: 1
-  maxUpgrade: 3
-  upgradeCost: 100
+  maxUpgrade: 1
+  upgradeCost: 3000
   killCount: 0
   attackPrefab: {fileID: 7905252089126529574, guid: a7a6294f0997b2b41a180e5a981ea632, type: 3}
-  attackDelay: 0.5
+  attackDelay: 1
   mode: 0
-  power: 30
-  speed: 15
-  distance: 15
+  power: 5
+  speed: 20
+  distance: 10
   skill1Name: Dragon's Breath
   skill1Sprite: {fileID: 21300000, guid: 073b32417b155d145a483aae6b2b5e0b, type: 3}
-  skill1Delay: 30
-  skill1Tooltip: 'Dragon makes a big breath
+  skill1Delay: 3
+  skill1Tooltip: 'Dragon makes a big flame for 5s
 
-    Cooldown : 30s
-
-    Distance : 5m'
-  skill2Name: None
-  skill2Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
+    Cooldown : 20s'
+  skill2Name: Burn ALL
+  skill2Sprite: {fileID: 21300000, guid: ac4f0f119d22d984bab5a749261f2b2d, type: 3}
   skill2Delay: 0
-  skill2Tooltip: None
+  skill2Tooltip: Dragon's skill & normal attack give target a burn
+  flamePrefab: {fileID: 8480803569222882197, guid: 1227b28a5d2dfa6468b40c045f9a3e4a, type: 3}
+  skill1Distance: 7
+  skill1Duration: 5

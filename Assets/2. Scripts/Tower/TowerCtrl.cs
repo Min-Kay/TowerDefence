@@ -95,7 +95,7 @@ public class TowerCtrl : TowerBaseCtrl
         if (target != null)
         {
             var attackObject = Instantiate(attackPrefab, transform.position, transform.rotation);
-            attackObject.GetComponent<AttackObject>().fatherTower = this.gameObject;
+            attackObject.GetComponent<AttackObject>().fatherTower = gameObject;
             attackObject.GetComponent<AttackObject>().targetEnemy = target;
         }
     }

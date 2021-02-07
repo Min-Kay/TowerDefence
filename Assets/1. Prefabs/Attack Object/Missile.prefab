@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3492607039716125739}
   - component: {fileID: 6051048163004168317}
   - component: {fileID: 331072970025851845}
-  - component: {fileID: 3277551629014834494}
   - component: {fileID: -10539512276418115}
+  - component: {fileID: 6459913222520356777}
   m_Layer: 0
   m_Name: Missile
   m_TagString: AttackObject
@@ -111,23 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 1.7}
   m_EdgeRadius: 0
---- !u!114 &3277551629014834494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7905252089126529574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2047c13750f13c419213569bbf1e5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power: 30
-  speed: 20
-  angleOffset: -180
-  targetEnemy: {fileID: 0}
-  fatherTower: {fileID: 0}
 --- !u!50 &-10539512276418115
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +132,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6459913222520356777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905252089126529574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac7e5c1d58ae6e4ea3368dadcc33b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 0
+  angleOffset: -180
+  targetEnemy: {fileID: 0}
+  fatherTower: {fileID: 0}

@@ -15,11 +15,11 @@ E:/Apps/Unity/Unity WorkSpace/TowerDefence
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-12218
+5516
 Successfully changed project path to: E:/Apps/Unity/Unity WorkSpace/TowerDefence
 E:/Apps/Unity/Unity WorkSpace/TowerDefence
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 39.48 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 39.22 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,49 +35,344 @@ Initialize mono
 Mono path[0] = 'E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56192
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001034 seconds.
+Registered in 0.001112 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.26 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 40.47 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.894 seconds
+- Completed reload, in  2.159 seconds
 Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001043 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.865 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1833 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.0 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2283.
+Total: 1.959500 ms (FindLiveObjects: 0.175600 ms CreateObjectMapping: 0.062300 ms MarkObjects: 1.694000 ms  DeleteObjects: 0.026300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a784abe327432272efec484d05a3cf5') in 0.276564 seconds
+  Import took 0.281563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.242438 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '694ee7d2c3b94a033205809c6c141ddd') in 0.030649 seconds
+  Import took 0.035046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.674301 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2caf14b8188d01b24972c94837d8b423') in 0.021053 seconds
+  Import took 0.025964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.869028 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddef7404cf58ae4d4b5c13afdb5abdd2') in 0.018466 seconds
+  Import took 0.022695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.428110 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fabcfa6aebe6a1c168e09695a09265c') in 0.018475 seconds
+  Import took 0.022905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.447506 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfbb0ad1eb1a663f1c89d4601c83834e') in 0.019490 seconds
+  Import took 0.024181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.383638 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2f5736a63a42d30e22ef2049a69e344') in 0.018116 seconds
+  Import took 0.021837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.197266 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e105a31e33256369813949c522e215e3') in 0.020074 seconds
+  Import took 0.024415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.591981 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8337cac16b4c7871f016a1fdc9c33558') in 0.017445 seconds
+  Import took 0.021366 seconds .
+
+========================================================================
+Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.000977 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 69.38 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.435 seconds
+- Completed reload, in  0.815 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1830 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.9 MB.
-System memory in use after: 89.0 MB.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.7 MB.
+System memory in use after: 91.8 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2279.
-Total: 3.112800 ms (FindLiveObjects: 0.377500 ms CreateObjectMapping: 0.121200 ms MarkObjects: 2.526900 ms  DeleteObjects: 0.084400 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2292.
+Total: 1.873100 ms (FindLiveObjects: 0.254200 ms CreateObjectMapping: 0.100600 ms MarkObjects: 1.488600 ms  DeleteObjects: 0.028500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001052 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.893 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.9 MB.
+System memory in use after: 92.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2294.
+Total: 1.712100 ms (FindLiveObjects: 0.162900 ms CreateObjectMapping: 0.062000 ms MarkObjects: 1.471300 ms  DeleteObjects: 0.014800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001049 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.760 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.1 MB.
+System memory in use after: 92.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2296.
+Total: 1.780900 ms (FindLiveObjects: 0.151200 ms CreateObjectMapping: 0.064300 ms MarkObjects: 1.550500 ms  DeleteObjects: 0.014100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/2. Scripts/Enemy/WaveSystem.cs
-  artifactKey: Guid(15dfca286276c6f4696b181530b530b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2. Scripts/Enemy/WaveSystem.cs using Guid(15dfca286276c6f4696b181530b530b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eede6d7460538b08cd9385263e1d5433') in 0.045917 seconds
-  Import took 0.051313 seconds .
+  Time since last request: 132.422862 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b679005b5219110a3dae3b1d9ff2a2b7') in 0.134144 seconds
+  Import took 0.138365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.588647 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688663d186ae111f7d5a67f5a4759787') in 0.019737 seconds
+  Import took 0.024046 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001471 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.259 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.3 MB.
+System memory in use after: 92.4 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2299.
+Total: 2.873600 ms (FindLiveObjects: 0.195000 ms CreateObjectMapping: 0.082200 ms MarkObjects: 2.568500 ms  DeleteObjects: 0.026300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.636116 seconds.
+  path: Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab
+  artifactKey: Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Attack Object/Dragon's Breath.prefab using Guid(1227b28a5d2dfa6468b40c045f9a3e4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0a4f9a0a686ea319e603527a44ddf2f') in 0.186580 seconds
+  Import took 0.192789 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001094 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.4 MB.
+System memory in use after: 92.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2302.
+Total: 1.907600 ms (FindLiveObjects: 0.171800 ms CreateObjectMapping: 0.066500 ms MarkObjects: 1.650200 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001542 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.764 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.5 MB.
+System memory in use after: 92.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2304.
+Total: 1.784500 ms (FindLiveObjects: 0.212900 ms CreateObjectMapping: 0.068300 ms MarkObjects: 1.487000 ms  DeleteObjects: 0.015300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001360 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.994 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.8 MB.
+System memory in use after: 92.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2306.
+Total: 2.073600 ms (FindLiveObjects: 0.191300 ms CreateObjectMapping: 0.075700 ms MarkObjects: 1.789200 ms  DeleteObjects: 0.016300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001086 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.886 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.9 MB.
+System memory in use after: 93.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2308.
+Total: 2.706400 ms (FindLiveObjects: 0.311200 ms CreateObjectMapping: 0.139300 ms MarkObjects: 2.235900 ms  DeleteObjects: 0.018600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001167 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.775 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.1 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2310.
+Total: 1.814200 ms (FindLiveObjects: 0.164900 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.570400 ms  DeleteObjects: 0.014400 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

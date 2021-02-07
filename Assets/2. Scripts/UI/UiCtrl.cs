@@ -24,7 +24,7 @@ public class UiCtrl : MonoBehaviour
     public GameObject win;
     public GameObject lose;
 
-    private TowerCtrl tower;
+    private TowerBaseCtrl tower;
     private bool isUiActive;
 
     [Header("Tower UI")]
@@ -36,12 +36,14 @@ public class UiCtrl : MonoBehaviour
     public Text attackPower;
     public Text killCount;
     public Text mode;
-    public Image skill1 = null;
-    public Image skill2 = null;
+    public Image skill1;
+    public Image cooldown1;
+    public Image skill2;
+    public Image cooldown2;
 
     private int gameSpeed = 1;
 
-    void Start()
+    void Awake()
     {
         gameOver.gameObject.SetActive(false);
         ShowTowerMenu();
@@ -124,6 +126,33 @@ public class UiCtrl : MonoBehaviour
         mode.text = tower.mode.ToString();
         skill1.sprite = tower.skill1Sprite;
         skill2.sprite = tower.skill2Sprite;
+        cooldown1.sprite = tower.skill1Sprite;
+        cooldown2.sprite = tower.skill2Sprite;
+    }
+
+    void InitCooldown(Image skill)
+    {
+        skill.color = new Color(0, 0, 0, 0.6f);
+        skill.type = Image.Type.Filled;
+        skill.fillMethod = Image.FillMethod.Radial360;
+        skill.fillOrigin = (int)Image.Origin360.Top;
+        skill.fillClockwise = false;
+    }
+
+    public void CallCooldown(Image skill, float duration)
+    {
+        InitCooldown(skill);
+        StartCoroutine(Cooldown(skill, duration));
+    }
+
+    private IEnumerator Cooldown(Image skill, float duration)
+    {
+        while (skill.fillAmount > 0)
+        {
+            skill.fillAmount -= 1 * Time.smoothDeltaTime / duration;
+            yield return null;
+        }
+        yield break;
     }
 
     public void ChangeTowerMode()
@@ -164,6 +193,7 @@ public class UiCtrl : MonoBehaviour
             GameManager.instance.UpdateMoney();
             ShowTowerMenu();
             Destroy(tower.gameObject);
+            GameManager.instance.targetTower = null;
         }
     }
 
