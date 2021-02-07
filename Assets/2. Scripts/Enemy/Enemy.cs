@@ -148,6 +148,11 @@ public class Enemy : MonoBehaviour
         spr.color = color;
     }
 
+    public void SkillDamaged(int damege)
+    {
+        HP -= damege;
+    }
+
     private void SpawnEnemyHPSlider()
     {
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);

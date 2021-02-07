@@ -1,83 +1,891 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.0) 64bit' Language: 'ko' Physical Memory: 16226 MB
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'ko' Physical Memory: 16322 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-E:\Apps\Unity\Unity Project\2020.2.1f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-E:/Apps/Unity/Unity WorkSpace/TowerDefence
+C:/Users/kbh97/Desktop/TowerDefenceProject/test
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-12218
-Successfully changed project path to: E:/Apps/Unity/Unity WorkSpace/TowerDefence
-E:/Apps/Unity/Unity WorkSpace/TowerDefence
+14788
+Successfully changed project path to: C:/Users/kbh97/Desktop/TowerDefenceProject/test
+C:/Users/kbh97/Desktop/TowerDefenceProject/test
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 39.48 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 43.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
-[Subsystems] Discovering subsystems at path E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/Apps/Unity/Unity WorkSpace/TowerDefence/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/kbh97/Desktop/TowerDefenceProject/test/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
     Vendor:   
-    VRAM:     3962 MB
-    Driver:   27.21.14.6140
+    VRAM:     5980 MB
+    Driver:   27.21.14.6089
 Initialize mono
-Mono path[0] = 'E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/Managed'
-Mono path[1] = 'E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56952
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/Apps/Unity/Unity Project/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001034 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001648 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.26 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 40.70 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.894 seconds
+- Completed reload, in  1.670 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000977 seconds.
+Registered in 0.001143 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 69.38 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 43.94 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.435 seconds
+- Completed reload, in  0.893 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1830 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 88.9 MB.
 System memory in use after: 89.0 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2279.
-Total: 3.112800 ms (FindLiveObjects: 0.377500 ms CreateObjectMapping: 0.121200 ms MarkObjects: 2.526900 ms  DeleteObjects: 0.084400 ms)
+Total: 1.736100 ms (FindLiveObjects: 0.188000 ms CreateObjectMapping: 0.080700 ms MarkObjects: 1.415400 ms  DeleteObjects: 0.051200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/2. Scripts/Enemy/WaveSystem.cs
-  artifactKey: Guid(15dfca286276c6f4696b181530b530b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2. Scripts/Enemy/WaveSystem.cs using Guid(15dfca286276c6f4696b181530b530b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eede6d7460538b08cd9385263e1d5433') in 0.045917 seconds
-  Import took 0.051313 seconds .
+  path: Assets/TowerDefence.unity
+  artifactKey: Guid(b83710d298cea62468f52de3999a3430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TowerDefence.unity using Guid(b83710d298cea62468f52de3999a3430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa050393bbfe1ded7afd5d40705c42d') in 0.014857 seconds
+  Import took 0.017504 seconds .
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/1. Prefabs
+  artifactKey: Guid(5458d2319003bef47af176be1ebb5ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs using Guid(5458d2319003bef47af176be1ebb5ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4273dab0eb579c8da79e8448ca4f156b') in 0.005662 seconds
+  Import took 0.008158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.349770 seconds.
+  path: Assets/2. Scripts/Tower/TowerCtrl.cs
+  artifactKey: Guid(ac9e8d99eb32a514c95f0e765f72b9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2. Scripts/Tower/TowerCtrl.cs using Guid(ac9e8d99eb32a514c95f0e765f72b9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b4aa9f5e4afa54afa4fe9e36a198cb1') in 0.028589 seconds
+  Import took 0.032246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000709 seconds.
+  path: Assets/2. Scripts/Tower/TowerCtrl.cs
+  artifactKey: Guid(ac9e8d99eb32a514c95f0e765f72b9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2. Scripts/Tower/TowerCtrl.cs using Guid(ac9e8d99eb32a514c95f0e765f72b9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b4aa9f5e4afa54afa4fe9e36a198cb1') in 0.002176 seconds
+  Import took 0.004816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.568551 seconds.
+  path: Assets/2. Scripts/Tower/TowerBaseCtrl.cs
+  artifactKey: Guid(9e79a6997ada9aa468ea2cf32f32ad08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2. Scripts/Tower/TowerBaseCtrl.cs using Guid(9e79a6997ada9aa468ea2cf32f32ad08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cd442143e2a0359103893f7f8fb9e3b') in 0.009311 seconds
+  Import took 0.012630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.116386 seconds.
+  path: Assets/2. Scripts/Tower/TowerBaseCtrl.cs
+  artifactKey: Guid(9e79a6997ada9aa468ea2cf32f32ad08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2. Scripts/Tower/TowerBaseCtrl.cs using Guid(9e79a6997ada9aa468ea2cf32f32ad08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba819f220cb0f055417960b72b72d371') in 0.006062 seconds
+  Import took 0.009720 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000955 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.834 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.5 MB.
+System memory in use after: 88.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2281.
+Total: 2.097100 ms (FindLiveObjects: 0.170200 ms CreateObjectMapping: 0.085200 ms MarkObjects: 1.825300 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.033505 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.836 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.7 MB.
+System memory in use after: 88.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2283.
+Total: 1.763600 ms (FindLiveObjects: 0.167800 ms CreateObjectMapping: 0.065500 ms MarkObjects: 1.513000 ms  DeleteObjects: 0.016500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 13156.179727 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bcaf34b9e124e65027deb659a52f00b') in 0.108852 seconds
+  Import took 0.111894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011860 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bcaf34b9e124e65027deb659a52f00b') in 0.014006 seconds
+  Import took 0.016843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.080266 seconds.
+  path: Assets/1. Prefabs/Tower/Dragon.prefab
+  artifactKey: Guid(15ad422497c605c49837da38ac4fc708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/Dragon.prefab using Guid(15ad422497c605c49837da38ac4fc708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeb591eac7964d3feed4c89fd96700ec') in 0.041244 seconds
+  Import took 0.044323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/1. Prefabs/Tower/Wizard.prefab
+  artifactKey: Guid(9970ac4597366344cb4fc5dadbba2c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/Wizard.prefab using Guid(9970ac4597366344cb4fc5dadbba2c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a904735705264e10201a01227c961086') in 0.035204 seconds
+  Import took 0.037938 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001847 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.882 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.0 MB.
+System memory in use after: 92.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2292.
+Total: 1.799900 ms (FindLiveObjects: 0.193500 ms CreateObjectMapping: 0.077400 ms MarkObjects: 1.509800 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.028835 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c8d0c18cd92021db760ed355b78da48') in 0.053391 seconds
+  Import took 0.056660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.031088 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f681084a461980b1e618f3f0f1c40c54') in 0.015341 seconds
+  Import took 0.018619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.387055 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daecbc3ba483afa73e8bb53a66994cd0') in 0.012787 seconds
+  Import took 0.015906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001837 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daecbc3ba483afa73e8bb53a66994cd0') in 0.042894 seconds
+  Import took 0.046286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.683671 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d36ac824224f9413fbc337aa64ec10') in 0.014610 seconds
+  Import took 0.017741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009592 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d36ac824224f9413fbc337aa64ec10') in 0.020469 seconds
+  Import took 0.024018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.406913 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '815f9309224ede33a0d3851eeaf575fd') in 0.014221 seconds
+  Import took 0.017851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '815f9309224ede33a0d3851eeaf575fd') in 0.027668 seconds
+  Import took 0.032965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.907473 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0667d3821beda30ddee65fbfc54ffa') in 0.014317 seconds
+  Import took 0.017326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 110.265850 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15eab1f7cca54530b555c9aa4c9aabeb') in 0.013730 seconds
+  Import took 0.017284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15eab1f7cca54530b555c9aa4c9aabeb') in 0.021105 seconds
+  Import took 0.024446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.399489 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73a38c15d1edc10e19f3a3f14007b614') in 0.014760 seconds
+  Import took 0.017883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.772214 seconds.
+  path: Assets/3. Assets/ToonExplosion v1.0/Animations
+  artifactKey: Guid(07c5fcbc7d37e354796d059af5f3c5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/ToonExplosion v1.0/Animations using Guid(07c5fcbc7d37e354796d059af5f3c5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f91756e8ae4ff3627f96364ff97e853') in 0.010058 seconds
+  Import took 0.013282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.452646 seconds.
+  path: Assets/3. Assets/ToonExplosion v1.0/Prefabs
+  artifactKey: Guid(77831dc0ee8b73e4ba5fe0a3eab7de16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/ToonExplosion v1.0/Prefabs using Guid(77831dc0ee8b73e4ba5fe0a3eab7de16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25e785a07d426477d3b68954e1f22e5') in 0.009802 seconds
+  Import took 0.013286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.272061 seconds.
+  path: Assets/3. Assets/ToonExplosion v1.0/Prefabs/Explosion.prefab
+  artifactKey: Guid(b185c1a9cf067374586d095111b15bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/ToonExplosion v1.0/Prefabs/Explosion.prefab using Guid(b185c1a9cf067374586d095111b15bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1778f8b2583908afb6354eb419557c') in 0.033670 seconds
+  Import took 0.037211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.922944 seconds.
+  path: Assets/1. Prefabs/Enemy/Enemy 2.prefab
+  artifactKey: Guid(5b309536c84fd4a45bf9a36efa81810d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Enemy/Enemy 2.prefab using Guid(5b309536c84fd4a45bf9a36efa81810d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9581fd29a82dc91e1179dd2db7ade1') in 0.045269 seconds
+  Import took 0.048129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/1. Prefabs/Enemy/Enemy.prefab
+  artifactKey: Guid(1f4983c0c66548648bff478b812a1e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Enemy/Enemy.prefab using Guid(1f4983c0c66548648bff478b812a1e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6968f8e57292b01537950503b1092b23') in 0.020415 seconds
+  Import took 0.023306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/1. Prefabs/Enemy/Enemy 3.prefab
+  artifactKey: Guid(079bf175548bbed4e93d055547e4114f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Enemy/Enemy 3.prefab using Guid(079bf175548bbed4e93d055547e4114f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6e304bea62d53d8f51d009df60bd2c') in 0.023370 seconds
+  Import took 0.026661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.613336 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-2.png
+  artifactKey: Guid(934ebe58c17a36b4aa8be02839812fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-2.png using Guid(934ebe58c17a36b4aa8be02839812fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728544f107c9a90d76bb633d3ecc1fe6') in 0.047111 seconds
+  Import took 0.049914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Rewards.png
+  artifactKey: Guid(2ed562f51228f2d43936568471777eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Rewards.png using Guid(2ed562f51228f2d43936568471777eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24368c96d064d0652bbc09951a62b00d') in 0.027309 seconds
+  Import took 0.030087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Music-On.png
+  artifactKey: Guid(47d2b2f43f49e2e4f87cf2f1b6e24494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Music-On.png using Guid(47d2b2f43f49e2e4f87cf2f1b6e24494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '136ed69bb03323017133d4ae259e8d28') in 0.029953 seconds
+  Import took 0.033799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Next.png
+  artifactKey: Guid(71be82853bdac344389071bf9e098dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Next.png using Guid(71be82853bdac344389071bf9e098dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f290473f36a19724d348c6d3a2a85299') in 0.027031 seconds
+  Import took 0.031266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Notification-off.png
+  artifactKey: Guid(ff9f2d33bb8579b4eab2aca4402bff50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Notification-off.png using Guid(ff9f2d33bb8579b4eab2aca4402bff50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d49f5bc801912198c5aac73fac5f38') in 0.023394 seconds
+  Import took 0.026450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Music-off.png
+  artifactKey: Guid(6c85c9ecb17515b4885d8ca576985053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Music-off.png using Guid(6c85c9ecb17515b4885d8ca576985053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba1079ce101f071893f674a60784dff2') in 0.022978 seconds
+  Import took 0.025779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Shuffle.png
+  artifactKey: Guid(268dad1ec2ddb54429c1ef077e280587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Shuffle.png using Guid(268dad1ec2ddb54429c1ef077e280587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1ae1c15cb4db71bcdb01a513393ce9') in 0.025622 seconds
+  Import took 0.028243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Save.png
+  artifactKey: Guid(736343c7589836c4ca6053f777ac3212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Save.png using Guid(736343c7589836c4ca6053f777ac3212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546cf7b5f8cf60395159fffcf0e68963') in 0.047904 seconds
+  Import took 0.055573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Pause.png
+  artifactKey: Guid(d2d5e0a9e91a58a40904a3f67390aed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Pause.png using Guid(d2d5e0a9e91a58a40904a3f67390aed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '343e4b7e2f3c799337f491ed58767dff') in 0.048890 seconds
+  Import took 0.055537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Unlock.png
+  artifactKey: Guid(3a284c2afadf6064088265b5c260a1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Unlock.png using Guid(3a284c2afadf6064088265b5c260a1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4251aad37eb77fd6a344f3a1c0b2287e') in 0.040483 seconds
+  Import took 0.045041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Question-mark.png
+  artifactKey: Guid(2fe79b819bfaef84cb0417aab9f3a479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Question-mark.png using Guid(2fe79b819bfaef84cb0417aab9f3a479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '547a3dd05d01e51ff408410d90114d9e') in 0.029043 seconds
+  Import took 0.032865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/No-Ads.png
+  artifactKey: Guid(af7066f368bf11e42bce71b5f4fa7668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/No-Ads.png using Guid(af7066f368bf11e42bce71b5f4fa7668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927fc2a7f349f09c22d18a3378f9df48') in 0.028755 seconds
+  Import took 0.033961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Settings.png
+  artifactKey: Guid(3aafd2453d0b11941a3062fb323c371a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Settings.png using Guid(3aafd2453d0b11941a3062fb323c371a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66608546a7d9288161544189f5bb68a7') in 0.025975 seconds
+  Import took 0.028657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Sound-off.png
+  artifactKey: Guid(008f271f7e6f89c4481e825bc1bc506e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Sound-off.png using Guid(008f271f7e6f89c4481e825bc1bc506e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4113fe4200a4a18d1fd12b3a95fff56') in 0.024905 seconds
+  Import took 0.027612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Vibrate.png
+  artifactKey: Guid(400004c82422ff6489c96e1f22a5be12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Vibrate.png using Guid(400004c82422ff6489c96e1f22a5be12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '963b084db5f048ab68136c35dd616769') in 0.028152 seconds
+  Import took 0.030953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Network.png
+  artifactKey: Guid(8757672746f26ed448a3496ce9221f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Network.png using Guid(8757672746f26ed448a3496ce9221f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64171f8a892cd881cb7b37e58cd4395f') in 0.031888 seconds
+  Import took 0.036044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Sound-on.png
+  artifactKey: Guid(2c5fab393badfc0488d7be9be8d754c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Sound-on.png using Guid(2c5fab393badfc0488d7be9be8d754c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98b18be18c11d327962a5a06a4651ea') in 0.061177 seconds
+  Import took 0.069256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Share.png
+  artifactKey: Guid(8f9455015f1c6b340a1182378f19447f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Share.png using Guid(8f9455015f1c6b340a1182378f19447f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193dffc20bdfbf7e716709f5e04c3651') in 0.036785 seconds
+  Import took 0.041797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Star.png
+  artifactKey: Guid(9aeb4ef8daa71db4796960287f82c142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Star.png using Guid(9aeb4ef8daa71db4796960287f82c142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a22d38756637a416d85a5798bd626b') in 0.034581 seconds
+  Import took 0.038645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001074 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Notification-on.png
+  artifactKey: Guid(bec5c06ae7fc41340b08ebe10de0ef50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Notification-on.png using Guid(bec5c06ae7fc41340b08ebe10de0ef50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b805c7beb11dd657b3819f4deabcb0') in 0.050313 seconds
+  Import took 0.054121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-4.png
+  artifactKey: Guid(f6993a81d020377468a773562a06cc80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-4.png using Guid(f6993a81d020377468a773562a06cc80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d43c1e4304a547becf8119c9c1c728d') in 0.041914 seconds
+  Import took 0.045372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Power.png
+  artifactKey: Guid(a04252d30fbd5ae4b824d1d087e31016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Power.png using Guid(a04252d30fbd5ae4b824d1d087e31016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05248fd21127152e305606db69045531') in 0.032409 seconds
+  Import took 0.036825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-3.png
+  artifactKey: Guid(70b23b11497ee16438f012baec7b71ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-3.png using Guid(70b23b11497ee16438f012baec7b71ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ec7baeb3e9a4d0dcab4a0b82e68bfe') in 0.036509 seconds
+  Import took 0.039720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/People.png
+  artifactKey: Guid(69f10ad417b351543be5f316f55f1916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/People.png using Guid(69f10ad417b351543be5f316f55f1916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69a21b56bdb73ae073d3716799a01171') in 0.037016 seconds
+  Import took 0.041426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-3.png
+  artifactKey: Guid(70b23b11497ee16438f012baec7b71ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu-3.png using Guid(70b23b11497ee16438f012baec7b71ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ec7baeb3e9a4d0dcab4a0b82e68bfe') in 0.086361 seconds
+  Import took 0.097060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Rate.png
+  artifactKey: Guid(29a741d6b3546bb4ea3cd4e33bca0f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Rate.png using Guid(29a741d6b3546bb4ea3cd4e33bca0f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9876f9f250be9347080211a11f1cb97c') in 0.041677 seconds
+  Import took 0.044819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000479 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Play.png
+  artifactKey: Guid(90741acd276b75e43b449f1ee1570b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Play.png using Guid(90741acd276b75e43b449f1ee1570b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09d0a2604fdc8788c96e387cefa43f2') in 0.078502 seconds
+  Import took 0.089911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000816 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Up.png
+  artifactKey: Guid(ca503b2e7217b584faf9b80390caa4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Up.png using Guid(ca503b2e7217b584faf9b80390caa4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec93d952e4106608d7465fb6c9e95cbe') in 0.049103 seconds
+  Import took 0.056236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Subtract.png
+  artifactKey: Guid(58225222292b2364ca5848be53321fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Subtract.png using Guid(58225222292b2364ca5848be53321fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d64c74437566b049cd09044ddbcf54') in 0.021422 seconds
+  Import took 0.024853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu.png
+  artifactKey: Guid(8d54fdebc2fdd3e43888b5197972abc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu.png using Guid(8d54fdebc2fdd3e43888b5197972abc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b537c34937e2bf61c46469985e1fab') in 0.035793 seconds
+  Import took 0.038817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Person.png
+  artifactKey: Guid(6074181641757934eb96f368e30ae7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Person.png using Guid(6074181641757934eb96f368e30ae7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62682dfea0dcf226f5068c99399d45a4') in 0.025326 seconds
+  Import took 0.028189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu.png
+  artifactKey: Guid(8d54fdebc2fdd3e43888b5197972abc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Menu.png using Guid(8d54fdebc2fdd3e43888b5197972abc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b537c34937e2bf61c46469985e1fab') in 0.017658 seconds
+  Import took 0.020365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Person.png
+  artifactKey: Guid(6074181641757934eb96f368e30ae7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Person.png using Guid(6074181641757934eb96f368e30ae7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62682dfea0dcf226f5068c99399d45a4') in 0.016930 seconds
+  Import took 0.019883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Retry.png
+  artifactKey: Guid(b54e8704fc818c549b8869cb94cdd6da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Retry.png using Guid(b54e8704fc818c549b8869cb94cdd6da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c11f8d7ddd88196669a2e58f330076f') in 0.025640 seconds
+  Import took 0.029247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Video.png
+  artifactKey: Guid(ff63a63a1752ab5498553956d44918f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/Saurabh Studio/Awesome Game UI pack 10/Pink Button Square/Video.png using Guid(ff63a63a1752ab5498553956d44918f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b285d02743bd5025cec34e20c85eaac') in 0.038695 seconds
+  Import took 0.041539 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000981 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.4 MB.
+System memory in use after: 92.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2297.
+Total: 1.649400 ms (FindLiveObjects: 0.165600 ms CreateObjectMapping: 0.069700 ms MarkObjects: 1.390900 ms  DeleteObjects: 0.022200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000956 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.6 MB.
+System memory in use after: 92.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2299.
+Total: 1.936200 ms (FindLiveObjects: 0.180000 ms CreateObjectMapping: 0.075800 ms MarkObjects: 1.638400 ms  DeleteObjects: 0.040400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 192.516183 seconds.
+  path: Assets/3. Assets/ToonExplosion v1.0/Textures/Explosion.png
+  artifactKey: Guid(c8260d15cb31d3d49a251f7cdb4d1777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3. Assets/ToonExplosion v1.0/Textures/Explosion.png using Guid(c8260d15cb31d3d49a251f7cdb4d1777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9de3eafdee9bc983926e6c86b0c59ee') in 0.069126 seconds
+  Import took 0.072590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.226916 seconds.
+  path: Assets/1. Prefabs/Tilemap/Brown Stony Light.asset
+  artifactKey: Guid(16f81bcb75bb36d479ed498d32e59b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Brown Stony Light.asset using Guid(16f81bcb75bb36d479ed498d32e59b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c5af54598ebfe2a68932041d047bc13') in 0.023977 seconds
+  Import took 0.026718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/1. Prefabs/Tilemap/New Palette.prefab
+  artifactKey: Guid(839ec12d18e70d64d8d6bed6abee0508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/New Palette.prefab using Guid(839ec12d18e70d64d8d6bed6abee0508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b4e55b559e1f1cd8bd5b2cde8b86b16') in 0.012429 seconds
+  Import took 0.015184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/1. Prefabs/Tilemap/TileWall.prefab
+  artifactKey: Guid(1a923ae8e6a8a094e91f06675aa3fe3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/TileWall.prefab using Guid(1a923ae8e6a8a094e91f06675aa3fe3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aaaf2d2e55a5e39d911f42007175cc2') in 0.038313 seconds
+  Import took 0.041071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/1. Prefabs/Tilemap/Water Deep Blue.asset
+  artifactKey: Guid(777e39cffb01fd54890206759b6247d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Water Deep Blue.asset using Guid(777e39cffb01fd54890206759b6247d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83f318a8831e71600478ba80dd065c1e') in 0.025922 seconds
+  Import took 0.028877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/1. Prefabs/Tilemap/Brown Stony.asset
+  artifactKey: Guid(deb74dde071e78e42b8adb38589a1833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Brown Stony.asset using Guid(deb74dde071e78e42b8adb38589a1833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89790469991aae02fa08851f9cf65c2') in 0.020664 seconds
+  Import took 0.023641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/1. Prefabs/Tilemap/TileWall.asset
+  artifactKey: Guid(6592bfc336842f7419faf106e9c5e0a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/TileWall.asset using Guid(6592bfc336842f7419faf106e9c5e0a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b2806d6c727127c2821a47c8e974a5') in 0.008657 seconds
+  Import took 0.011918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/1. Prefabs/Tilemap/Sandy.asset
+  artifactKey: Guid(bc4bd9105fd816c40a03427d66d28b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Sandy.asset using Guid(bc4bd9105fd816c40a03427d66d28b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '140785a668aab684fa9991a71d0028e1') in 0.019605 seconds
+  Import took 0.022363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/1. Prefabs/Tilemap/Water Light Blue.asset
+  artifactKey: Guid(5434aefd193a81643a29fa074970675c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Water Light Blue.asset using Guid(5434aefd193a81643a29fa074970675c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff6ffb757ae19a5a49c80e9b3dbf3f6') in 0.020892 seconds
+  Import took 0.023694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/1. Prefabs/Tilemap/Grey Stones.asset
+  artifactKey: Guid(5b6ce187a7775d44aa15052ca2db994b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Grey Stones.asset using Guid(5b6ce187a7775d44aa15052ca2db994b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1584d32de81937a8dfb01e294bb2621') in 0.030786 seconds
+  Import took 0.033674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/1. Prefabs/Tilemap/Sandy Orange.asset
+  artifactKey: Guid(8c0795472193f3846a4e8d5e4ed94230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Sandy Orange.asset using Guid(8c0795472193f3846a4e8d5e4ed94230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6336958948829791c4c5d476563353f1') in 0.028260 seconds
+  Import took 0.031262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/1. Prefabs/Tilemap/Grass.asset
+  artifactKey: Guid(c58a043f476e6e34e81e3a890d777c2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tilemap/Grass.asset using Guid(c58a043f476e6e34e81e3a890d777c2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7b3baa64fd53be2c8c30b2d1dcbffd') in 0.030942 seconds
+  Import took 0.034022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.458414 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919bef2179af9dc1e9b8badc5ed1257f') in 0.022129 seconds
+  Import took 0.026783 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001450 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.7 MB.
+System memory in use after: 92.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2304.
+Total: 1.611500 ms (FindLiveObjects: 0.164700 ms CreateObjectMapping: 0.059300 ms MarkObjects: 1.372200 ms  DeleteObjects: 0.014100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 91.501687 seconds.
+  path: Assets/1. Prefabs/Tower/DarkWizard.prefab
+  artifactKey: Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/Tower/DarkWizard.prefab using Guid(af07cb00645694f4ebbf3e8edf6b839f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26794dfe1f2dfa282ec999e7a8592284') in 0.053602 seconds
+  Import took 0.056589 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001007 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.816 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.0 MB.
+System memory in use after: 93.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2307.
+Total: 1.764300 ms (FindLiveObjects: 0.182500 ms CreateObjectMapping: 0.072900 ms MarkObjects: 1.493100 ms  DeleteObjects: 0.014500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 793.421494 seconds.
+  path: Assets/1. Prefabs/UI/HP.prefab
+  artifactKey: Guid(a33988abf16b0ac4d8832b347bbba479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/UI/HP.prefab using Guid(a33988abf16b0ac4d8832b347bbba479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a71f8c662b968ed789408c86b103199') in 0.041947 seconds
+  Import took 0.045506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/1. Prefabs/UI/SkillTooltip.prefab
+  artifactKey: Guid(705517afa4b40c6489d0b2720005d5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/UI/SkillTooltip.prefab using Guid(705517afa4b40c6489d0b2720005d5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbd483b469dc93d83392997b1f9b8186') in 0.022012 seconds
+  Import took 0.024872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/1. Prefabs/UI/SliderEnemyHP.prefab
+  artifactKey: Guid(62db1e0120480024aa3f066a65261fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/UI/SliderEnemyHP.prefab using Guid(62db1e0120480024aa3f066a65261fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5acae1748cbf54ab7c470625d3411e04') in 0.014869 seconds
+  Import took 0.018348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/1. Prefabs/UI/Money.prefab
+  artifactKey: Guid(6fb3163ff09df9b42aaa4e869d41c5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/UI/Money.prefab using Guid(6fb3163ff09df9b42aaa4e869d41c5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c898e9c543ba5d973833b4c0490a955f') in 0.015010 seconds
+  Import took 0.017788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001483 seconds.
+  path: Assets/1. Prefabs/UI/Money.prefab
+  artifactKey: Guid(6fb3163ff09df9b42aaa4e869d41c5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1. Prefabs/UI/Money.prefab using Guid(6fb3163ff09df9b42aaa4e869d41c5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c898e9c543ba5d973833b4c0490a955f') in 0.005565 seconds
+  Import took 0.008486 seconds .
+

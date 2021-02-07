@@ -35,6 +35,7 @@ public class TowerBaseCtrl : MonoBehaviour
     public string skill2Name;
     public Sprite skill2Sprite;
     public float skill2Delay;
+    public GameObject skillPrefab;
     [TextArea]
     public string skill2Tooltip;
 

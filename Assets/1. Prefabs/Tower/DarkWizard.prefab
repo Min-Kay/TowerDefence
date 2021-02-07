@@ -110,11 +110,12 @@ MonoBehaviour:
   distance: 10
   skill1Name: FireWall
   skill1Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
-  skill1Delay: 5000
+  skill1Delay: 5
   skill1Tooltip: Generate Fire wall
   skill2Name: Explosion
   skill2Sprite: {fileID: 21300004, guid: c8260d15cb31d3d49a251f7cdb4d1777, type: 3}
-  skill2Delay: 10000
+  skill2Delay: 3
+  skillPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   skill2Tooltip: Explosion with large scale
 --- !u!61 &-3167317260168394001
 BoxCollider2D:

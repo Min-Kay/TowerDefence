@@ -103,15 +103,18 @@ public class TowerCtrl : TowerBaseCtrl
 
     private IEnumerator ActiveSkill()
     {
-        ActiveSkill2();
-        yield return new WaitForSeconds(skill2Delay);
+        while (!GameManager.instance.isGameOver)
+        {
+            ActiveSkill2();
+            yield return new WaitForSeconds(skill2Delay);
+        }
     }
 
     protected override void ActiveSkill2()
     {
         if(target != null)
         {
-
+            var skillObject = Instantiate(skillPrefab, target.transform.position, target.transform.rotation);
         }
     }
 }
