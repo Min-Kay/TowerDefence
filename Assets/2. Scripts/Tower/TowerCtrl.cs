@@ -8,7 +8,8 @@ public class TowerCtrl : TowerBaseCtrl
     void Start()
     {
         StartCoroutine(TowerAI());
-        StartCoroutine(ActiveSkill());
+        StartCoroutine(ActiveSkill1());
+        StartCoroutine(ActiveSkill2());
     }
 
     public override void UpgradeTower()
@@ -101,20 +102,35 @@ public class TowerCtrl : TowerBaseCtrl
         }
     }
 
-    private IEnumerator ActiveSkill()
+    private IEnumerator ActiveSkill2()
     {
         while (!GameManager.instance.isGameOver)
         {
-            ActiveSkill2();
+            Skill2();
             yield return new WaitForSeconds(skill2Delay);
         }
     }
 
-    protected override void ActiveSkill2()
+    private IEnumerator ActiveSkill1()
+    {
+        while (!GameManager.instance.isGameOver)
+        {
+            Skill1();
+            yield return new WaitForSeconds(skill1Delay);
+        }
+    }
+
+    protected override void Skill1()
+    {
+        var skill1Object = Instantiate(skill1Prefab, transform.position, transform.rotation);
+        Destroy(skill1Object, 3);
+    }
+
+    protected override void Skill2()
     {
         if(target != null)
         {
-            var skillObject = Instantiate(skillPrefab, target.transform.position, target.transform.rotation);
+            Instantiate(skill2Prefab, target.transform.position, target.transform.rotation);
         }
     }
 }

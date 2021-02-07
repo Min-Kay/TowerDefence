@@ -28,6 +28,7 @@ public class TowerBaseCtrl : MonoBehaviour
     public string skill1Name;
     public Sprite skill1Sprite;
     public float skill1Delay;
+    public GameObject skill1Prefab;
     [TextArea]
     public string skill1Tooltip;
 
@@ -35,7 +36,7 @@ public class TowerBaseCtrl : MonoBehaviour
     public string skill2Name;
     public Sprite skill2Sprite;
     public float skill2Delay;
-    public GameObject skillPrefab;
+    public GameObject skill2Prefab;
     [TextArea]
     public string skill2Tooltip;
 
@@ -54,8 +55,8 @@ public class TowerBaseCtrl : MonoBehaviour
 
     protected virtual void SetStrongestTarget() { } 
 
-    protected virtual void ActiveSkill1() { }
-    protected virtual void ActiveSkill2() { }
+    protected virtual void Skill1() { }
+    protected virtual void Skill2() { }
 
 
 }
