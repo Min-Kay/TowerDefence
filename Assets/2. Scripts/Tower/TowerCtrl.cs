@@ -99,4 +99,38 @@ public class TowerCtrl : TowerBaseCtrl
             attackObject.GetComponent<AttackObject>().targetEnemy = target;
         }
     }
+
+    protected override IEnumerator Cooldown1(float duration)
+    {
+        skill1CoolTime = 1;
+        while (skill1CoolTime > 0)
+        {
+            skill1CoolTime -= 1 * Time.smoothDeltaTime / duration;
+            yield return null;
+        }
+    }
+
+    protected override IEnumerator Cooldown2(float duration)
+    {
+        skill2CoolTime = 1;
+        while (skill2CoolTime > 0)
+        {
+            skill2CoolTime -= 1 * Time.smoothDeltaTime / duration;
+            yield return null;
+        }
+    }
+
+    public override float GetCooltime(int i)
+    {
+        if (i == 1)
+        {
+            return skill1CoolTime;
+        }
+        else if (i == 2)
+        {
+            return skill2CoolTime;
+        }
+        else
+            return 0;
+    }
 }

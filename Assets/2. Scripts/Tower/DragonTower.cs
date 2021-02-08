@@ -11,12 +11,8 @@ public class DragonTower : TowerCtrl
     public float skill1Distance;
     public float skill1Duration;
 
-    private UiCtrl ui;
-    private float initTime;
-
     private void Awake()
     {
-        ui = GameObject.Find("UIManager").GetComponent<UiCtrl>();
         StartCoroutine(TowerAI());
         StartCoroutine(DragonBreath());
     }
@@ -69,8 +65,7 @@ public class DragonTower : TowerCtrl
                 flame.GetComponent<DragonBreath>().fatherTower = gameObject;
                 flame.GetComponent<DragonBreath>().target = target;
                 Destroy(flame, skill1Duration);
-                initTime = Time.time;
-                ui.CallCooldown(ui.cooldown1, skill1Delay);
+                StartCoroutine(Cooldown1(skill1Delay));
                 yield return new WaitForSeconds(skill1Delay);
             }
             else

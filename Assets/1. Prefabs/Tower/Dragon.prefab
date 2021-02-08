@@ -136,7 +136,7 @@ MonoBehaviour:
   distance: 10
   skill1Name: Dragon's Breath
   skill1Sprite: {fileID: 21300000, guid: 073b32417b155d145a483aae6b2b5e0b, type: 3}
-  skill1Delay: 3
+  skill1Delay: 5
   skill1Tooltip: 'Dragon makes a big flame for 5s
 
     Cooldown : 20s'

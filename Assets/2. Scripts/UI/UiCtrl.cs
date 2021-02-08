@@ -128,6 +128,10 @@ public class UiCtrl : MonoBehaviour
         skill2.sprite = tower.skill2Sprite;
         cooldown1.sprite = tower.skill1Sprite;
         cooldown2.sprite = tower.skill2Sprite;
+        InitCooldown(cooldown1);
+        InitCooldown(cooldown2);
+        cooldown1.fillAmount = tower.GetCooltime(1);
+        cooldown2.fillAmount = tower.GetCooltime(2);
     }
 
     void InitCooldown(Image skill)
@@ -137,22 +141,6 @@ public class UiCtrl : MonoBehaviour
         skill.fillMethod = Image.FillMethod.Radial360;
         skill.fillOrigin = (int)Image.Origin360.Top;
         skill.fillClockwise = false;
-    }
-
-    public void CallCooldown(Image skill, float duration)
-    {
-        InitCooldown(skill);
-        StartCoroutine(Cooldown(skill, duration));
-    }
-
-    private IEnumerator Cooldown(Image skill, float duration)
-    {
-        while (skill.fillAmount > 0)
-        {
-            skill.fillAmount -= 1 * Time.smoothDeltaTime / duration;
-            yield return null;
-        }
-        yield break;
     }
 
     public void ChangeTowerMode()

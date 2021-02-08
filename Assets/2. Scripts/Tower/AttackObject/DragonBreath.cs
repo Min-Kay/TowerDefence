@@ -40,12 +40,12 @@ public class DragonBreath : MonoBehaviour
             if (sp.flipX == true)
             {
                 sp.flipX = false;
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
             else if (sp.flipX == false)
             {
                 sp.flipX = true;
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
         }
         yield return null;
@@ -55,7 +55,7 @@ public class DragonBreath : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            initTime = Time.time + delay;
+            initTime = Time.smoothDeltaTime + delay;
         }
     }
 
@@ -68,10 +68,10 @@ public class DragonBreath : MonoBehaviour
                 collision.gameObject.AddComponent<BurnDamage>();
             }
 
-            if(initTime - Time.time <=0)
+            if(initTime - Time.smoothDeltaTime <= 0)
             {
                 collision.GetComponent<Enemy>().HP -= damage;
-                initTime = Time.time + delay;
+                initTime = Time.smoothDeltaTime + delay;
             }
         }
     }

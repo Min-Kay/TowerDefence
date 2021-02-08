@@ -28,6 +28,7 @@ public class TowerBaseCtrl : MonoBehaviour
     public string skill1Name;
     public Sprite skill1Sprite;
     public float skill1Delay;
+    protected float skill1CoolTime = 0;
     [TextArea]
     public string skill1Tooltip;
 
@@ -35,6 +36,7 @@ public class TowerBaseCtrl : MonoBehaviour
     public string skill2Name;
     public Sprite skill2Sprite;
     public float skill2Delay;
+    protected float skill2CoolTime = 0;
     [TextArea]
     public string skill2Tooltip;
 
@@ -52,9 +54,12 @@ public class TowerBaseCtrl : MonoBehaviour
     protected virtual void SetFirstTarget() { }
 
 
-    protected virtual void SetStrongestTarget() { } 
+    protected virtual void SetStrongestTarget() { }
 
+    protected virtual IEnumerator Cooldown1(float duration){ yield return null; }
+    protected virtual IEnumerator Cooldown2(float duration) { yield return null; }
 
+    public virtual float GetCooltime(int i){ return 0; }
 
 
 }
