@@ -35,21 +35,21 @@ public class AttackObject : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (targetEnemy == collision)
+        if (collision.gameObject == targetEnemy)
         {
             collision.GetComponent<Enemy>().HP -= power;
             if (collision.GetComponent<Enemy>().HP <= 0)
             {
                 fatherTower.GetComponent<TowerBaseCtrl>().killCount++;
             }
-            Destroy(collision.gameObject);
             collision.GetComponent<Enemy>().Invoke("Damaged", 0.2f);
+            Destroy(gameObject);
         }
     }
 }

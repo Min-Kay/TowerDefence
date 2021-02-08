@@ -53,7 +53,6 @@ public class TowerBaseCtrl : MonoBehaviour
 
     protected virtual void SetFirstTarget() { }
 
-
     protected virtual void SetStrongestTarget() { }
 
     protected virtual IEnumerator Cooldown1(float duration){ yield return null; }

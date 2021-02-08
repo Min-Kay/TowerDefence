@@ -6,7 +6,7 @@ public class DragonAttackObject : AttackObject
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (targetEnemy == collision)
+        if (collision.gameObject==targetEnemy)
         {
             collision.GetComponent<Enemy>().HP -= power;
             if (collision.GetComponent<Enemy>().HP <= 0)
@@ -20,7 +20,7 @@ public class DragonAttackObject : AttackObject
                 collision.GetComponent<BurnDamage>().fatherTower = gameObject.GetComponent<TowerBaseCtrl>();
             }
 
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
             collision.GetComponent<Enemy>().Invoke("Damaged", 0.2f);
         }
     }
