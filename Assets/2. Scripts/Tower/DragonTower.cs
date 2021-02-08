@@ -62,7 +62,7 @@ public class DragonTower : TowerCtrl
             if (target != null && skill1Distance >= Vector2.Distance(transform.position, target.transform.position))
             {
                 flame = Instantiate(flamePrefab, transform.position, transform.rotation);
-                flame.GetComponent<DragonBreath>().fatherTower = gameObject;
+                flame.GetComponent<DragonBreath>().fatherTower = gameObject.GetComponent<TowerBaseCtrl>();
                 flame.GetComponent<DragonBreath>().target = target;
                 Destroy(flame, skill1Duration);
                 StartCoroutine(Cooldown1(skill1Delay));

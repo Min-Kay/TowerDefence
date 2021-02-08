@@ -124,24 +124,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if(collision.tag == "AttackObject" && collision.GetComponent<AttackObject>().targetEnemy == this.gameObject)
-        {
-            HP -= collision.GetComponent<AttackObject>().power;
-            if (HP <= 0)
-            {
-                collision.GetComponent<AttackObject>().fatherTower.GetComponent<TowerCtrl>().killCount++;
-            }
-            Destroy(collision.gameObject);
-            color = spr.color;
-            color.a = 0.4f;
-            spr.color = color;
-            Invoke("Damaged", 0.2f);
-        }
-    }
-
     private void Damaged()
     {
         color.a = 1.0f;

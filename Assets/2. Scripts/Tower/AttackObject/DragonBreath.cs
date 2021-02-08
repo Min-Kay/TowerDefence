@@ -11,7 +11,7 @@ public class DragonBreath : MonoBehaviour
     public float delay = 0.3f;
 
     [HideInInspector]
-    public GameObject fatherTower;
+    public TowerBaseCtrl fatherTower;
     [HideInInspector]
     public GameObject target;
     private float initTime;
@@ -66,6 +66,7 @@ public class DragonBreath : MonoBehaviour
             if(!collision.GetComponent<BurnDamage>())
             {
                 collision.gameObject.AddComponent<BurnDamage>();
+                collision.GetComponent<BurnDamage>().fatherTower = fatherTower;
             }
 
             if(initTime - Time.smoothDeltaTime <= 0)

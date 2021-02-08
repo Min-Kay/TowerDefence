@@ -14,6 +14,7 @@ public class BurnDamage : MonoBehaviour
     private Enemy enemy;
     private SpriteRenderer sprite;
     private Color initColor;
+    public TowerBaseCtrl fatherTower;
 
     private void Awake()
     {
@@ -36,9 +37,18 @@ public class BurnDamage : MonoBehaviour
             if(initTime - Time.time >= 0) 
             {
                 enemy.HP -= damage;
+                if(enemy.HP <= 0)
+                {
+                    fatherTower.killCount++; 
+                }
                 enemy.Invoke("Damaged", 0.2f);
                 sprite.color = new Color(1, 0, 0, 1);
                 yield return new WaitForSeconds(delay);
+            }
+            else if(enemy.HP <=0)
+            {
+                Destroy(GetComponent<BurnDamage>());
+                yield return null;
             }
             else
             {
