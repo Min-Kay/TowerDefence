@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Enemy HP")]
+    [Header("Enemy State")]
+    public State state = State.MOVE;
     public float initHP;
     public float HP;
-    
 
     [Header("Damage Player")]
     [Tooltip("When an enemy reaches the end of a checkpoint, it damages the player by this power.")]
     public int attackPower;
 
-    public State state = State.MOVE;
-
-    [Header("Enemy HP UI")]
+    [Header("Enemy UI & Image Angle Offset")]
     public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
-    
+    public float angleOffset;
+
     private Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
 
     private int wayPointCount;//이동경로 갯수
@@ -27,10 +26,11 @@ public class Enemy : MonoBehaviour
 
     private Color color;
     private SpriteRenderer spr;
+    private UiCtrl ui;
 
-    [Header("playergold")]
+    [Header("Enemy Gold")]
     public int gold;
-    private int playergold;
+
     public enum State
     {
         MOVE,
@@ -41,11 +41,9 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
-        
-        
+        ui = GetComponent<UiCtrl>();
         canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
         HP = initHP;
-        //Setup(GameManager.instance.wayPoints);
         SpawnEnemyHPSlider();
     }
 
@@ -53,12 +51,12 @@ public class Enemy : MonoBehaviour
     {
         if(HP<=0)
         {
+            HP = 0;
             state = State.DIE;
-            
         }
     }
 
-    public void Setup(GameManager gameManager,Transform[] wayPoints)
+    public void Setup(GameManager gameManager, Transform[] wayPoints)
     {
         movement2D = GetComponent<Movement2D>();
 
@@ -79,16 +77,19 @@ public class Enemy : MonoBehaviour
             switch (state) 
             {
                 case State.MOVE:
-                    //NextMoveTo();
                     break;
                 case State.STOP:
-                    //몇초뒤에 다시 MOVE할지 조건필요 freeze 함수써서 invoke로 다시 StartCoroutine(OnMove());
                     break;
                 case State.DIE:
+                    /*if (ui.isEnemyUiActive)
+                    {
+                        Debug.Log("타워메뉴띄우기");
+                        ui.ShowTowerMenu();
+                    }*/
+                    GameManager.instance.currentEnemyCount--;
+                    Player.getInstance().ChangeMoney(gold);
+                    GameManager.instance.UpdateMoney();
                     Destroy(this.gameObject);
-                    GameManager.instance.currentEnemyCount--;//사망시 count 감소
-                    playergold=Player.getInstance().getMoney();//사망시 플레이어에게 몬스터골드추가
-                    Player.getInstance().setMoney(playergold + gold);
                     break;
             }
             yield return null;
@@ -116,19 +117,25 @@ public class Enemy : MonoBehaviour
             transform.position = wayPoints[currentIndex].position;
             currentIndex++;
 
-            Vector3 direction = (wayPoints[currentIndex].position - transform.position).normalized;
-            movement2D.MoveTo(direction);
+            Vector3 direction = wayPoints[currentIndex].position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + angleOffset));
+
+            movement2D.MoveTo(direction.normalized);
         }
         else
         {
-            GameManager.instance.playerHp -= attackPower;
-            Destroy(this.gameObject);
+            //GameManager.instance.currentEnemyCount--;
+            Player.getInstance().damaged(attackPower);
+            GameManager.instance.UpdateHP();
+            //Destroy(this.gameObject);
+            state = State.DIE;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool freeze = false;
+
         if(collision.tag == "AttackObject" && collision.GetComponent<AttackObject>().targetEnemy == this.gameObject)
         {
             HP -= collision.GetComponent<AttackObject>().power;
@@ -137,29 +144,14 @@ public class Enemy : MonoBehaviour
                 collision.GetComponent<AttackObject>().fatherTower.GetComponent<TowerCtrl>().killCount++;
             }
             Destroy(collision.gameObject);
-
-            //여기서 상태이상을 넣어야됨
-            if(!freeze)
-            {
-                color = spr.color;
-                color.a = 0.4f;
-                spr.color = color;
-                Invoke("Damaged", 0.2f);
-            }
-            else
-            {
-                state = State.STOP;
-            }
+            color = spr.color;
+            color.a = 0.4f;
+            spr.color = color;
+            Invoke("Damaged", 0.2f);
         }
     }
 
     private void Damaged()
-    {
-        color.a = 1.0f;
-        spr.color = color;
-    }
-
-    private void freezed()
     {
         color.a = 1.0f;
         spr.color = color;

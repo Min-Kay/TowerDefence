@@ -9,6 +9,8 @@ TagManager:
   - Tile
   - Canvas
   - Tower
+  - Skill1
+  - Skill2
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 

@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class WaveSystem : MonoBehaviour
 {
-    [SerializeField]
+
     public Wave[] waves;
+
     [SerializeField]
     private GameManager enemySpawner;
     private int currentWaveIndex = -1;
 
     public void StartWave()
     {
-        if(currentWaveIndex < waves.Length-1)
+        if(currentWaveIndex < waves.Length-1 && enemySpawner.currentEnemyCount == 0 )
         {
+            GameManager.instance.UpdateWave();
             currentWaveIndex++;
             enemySpawner.isGameStart = false;
             enemySpawner.GameStart(waves[currentWaveIndex]);

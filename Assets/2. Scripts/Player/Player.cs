@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     private int hp;
     private int money;
     
     private Player()
     {
-        hp = 10;
-        money = 0;
+        hp = GameManager.instance.playerHp;
+        money = GameManager.instance.playerMoney;
     }
 
     private static class PlayerHolder{
@@ -28,9 +27,9 @@ public class Player : MonoBehaviour
         return money;
     }
 
-    public void setMoney(int money)
+    public void ChangeMoney(int cost)
     {
-        this.money = money;
+        this.money += cost;
     }
 
     public int getHp()
@@ -38,8 +37,8 @@ public class Player : MonoBehaviour
         return hp;
     }
     
-    public void dameged(int damege)
+    public void damaged(int damage)
     {
-        this.hp -= hp;
+        this.hp -= damage;
     }
 }

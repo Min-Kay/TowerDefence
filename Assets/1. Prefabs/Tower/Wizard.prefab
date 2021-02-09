@@ -96,13 +96,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9e8d99eb32a514c95f0e765f72b9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerName: WIZARD
   price: 50
   upgradePhase: 1
+  maxUpgrade: 3
+  upgradeCost: 50
   killCount: 0
   attackPrefab: {fileID: 103399498140453914, guid: 10b22f3a23c1262469cbdb054b6c4ed2, type: 3}
   attackDelay: 0.5
   mode: 0
+  power: 10
+  speed: 20
   distance: 10
+  skill1Name: None
+  skill1Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
+  skill1Delay: 0
+  skill1Tooltip: None
+  skill2Name: None
+  skill2Sprite: {fileID: 21300000, guid: 58225222292b2364ca5848be53321fa0, type: 3}
+  skill2Delay: 0
+  skill2Tooltip: None
 --- !u!61 &5537136280309127537
 BoxCollider2D:
   m_ObjectHideFlags: 0

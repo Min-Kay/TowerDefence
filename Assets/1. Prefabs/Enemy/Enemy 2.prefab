@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3642678604097596930}
   - component: {fileID: 9007254164100025192}
   - component: {fileID: 1594602790998896471}
-  m_Layer: 0
+  - component: {fileID: -1528104492013438739}
+  m_Layer: 6
   m_Name: Enemy 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -97,12 +98,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78694862833c4f24e94eccb78da6defc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   initHP: 60
   HP: 0
-  gold: 20
   attackPower: 13
-  state: 0
   enemyHPSliderPrefab: {fileID: 6702318059884948026, guid: 62db1e0120480024aa3f066a65261fbe, type: 3}
+  angleOffset: -90
+  gold: 30
 --- !u!61 &9007254164100025192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,3 +145,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   moveDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &-1528104492013438739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814014532498392341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78694862833c4f24e94eccb78da6defc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  initHP: 50
+  HP: 0
+  attackPower: 12
+  enemyHPSliderPrefab: {fileID: 6702318059884948026, guid: 62db1e0120480024aa3f066a65261fbe, type: 3}
+  angleOffset: -90
+  gold: 20

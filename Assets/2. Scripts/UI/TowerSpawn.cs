@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class TowerSpawn : MonoBehaviour
 {
+    [Header("TowerSpawner Object")]
     public TowerSpawner towerSpawner;
+
+    [Header("Pay Cost")]
+    public MoneyChange moneyChanger;
 
     private Camera mainCamera;
     private Ray ray;
@@ -13,10 +17,13 @@ public class TowerSpawn : MonoBehaviour
     [HideInInspector]
     public GameObject currentTower = null;
 
+    private UiCtrl ui;
+
     private void Awake()
     {
-        gameObject.SetActive(false);
+        enabled = false;
         mainCamera = Camera.main;
+        ui = GetComponent<UiCtrl>();
     }
 
     void Update()
@@ -27,12 +34,23 @@ public class TowerSpawn : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                if (hit.transform.CompareTag("Tile") && !hit.transform.CompareTag("Tower") && currentTower != null)
+                int cost = currentTower.GetComponent<TowerCtrl>().price;
+
+                if (hit.transform.CompareTag("Tile") && currentTower != null && cost<=Player.getInstance().getMoney())
                 {
+                    Player.getInstance().ChangeMoney(-cost);
+                    moneyChanger.updateMoney();
                     towerSpawner.spawnTower(hit.transform, currentTower);
-                    gameObject.SetActive(false);
+                    ui.enabled = true; 
+                    enabled = false;
                 }
             }
+        }
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            ui.enabled = true;
+            enabled = false;
         }
     }
    

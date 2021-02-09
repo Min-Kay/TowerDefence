@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerSelect : MonoBehaviour
 {
@@ -10,8 +11,19 @@ public class TowerSelect : MonoBehaviour
     [Header("Tower PreFab")]
     public GameObject tower;
 
+    private Text cost;
+
+    private void Start()
+    {
+        cost = GetComponentInChildren<Text>();
+        cost.text = tower.GetComponent<TowerCtrl>().price.ToString();
+    }
+
     public void TowerButtonClick()
     {
-        towerSpawn.GetComponent<TowerSpawn>().currentTower = tower;
+        if (!GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
+        {
+            towerSpawn.GetComponent<TowerSpawn>().currentTower = tower;
+        }
     }
 }

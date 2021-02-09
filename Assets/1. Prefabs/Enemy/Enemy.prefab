@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2949637535794731315}
   - component: {fileID: 2243524939560292544}
   - component: {fileID: 3518654415346746688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111,12 +111,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78694862833c4f24e94eccb78da6defc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   initHP: 30
   HP: 0
-  gold: 10
   attackPower: 10
-  state: 0
   enemyHPSliderPrefab: {fileID: 6702318059884948026, guid: 62db1e0120480024aa3f066a65261fbe, type: 3}
+  angleOffset: -90
+  gold: 10
 --- !u!61 &3518654415346746688
 BoxCollider2D:
   m_ObjectHideFlags: 0

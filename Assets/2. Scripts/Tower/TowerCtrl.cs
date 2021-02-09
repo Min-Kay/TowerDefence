@@ -2,43 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerCtrl : MonoBehaviour
+public class TowerCtrl : TowerBaseCtrl
 {
-    [Header("Tower Information")]
-    public int price;
-    public int upgradePhase = 1;
-    public int killCount = 0;
-
-    [Header("Attack Info")]
-    public GameObject attackPrefab;
-    public float attackDelay;
-    public AttackMode mode;
-   
-    [Header("Tower Distance")]
-    public float distance;
-
-    //Enemy List
-    private GameObject[] enemys;
-    private GameObject target;
-
-    public enum AttackMode 
-    {
-        FirstTarget,
-        StrongestTarget
-    }
 
     void Start()
     {
-        enemys = null;
         StartCoroutine(TowerAI());
     }
 
-    void upgradeTower()
+    public override void UpgradeTower()
     {
-        upgradePhase++;
+        if (upgradePhase < maxUpgrade)
+        {
+            upgradePhase++;
+            upgradeCost *= 2;
+            power += 10;
+        }
     }
 
-    IEnumerator TowerAI()
+    protected override IEnumerator TowerAI()
     {
         while (!GameManager.instance.isGameOver)
         {
@@ -59,7 +41,7 @@ public class TowerCtrl : MonoBehaviour
         }
     }
 
-    private void SetFirstTarget()
+    protected override void SetFirstTarget()
     {
         enemys = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -76,7 +58,7 @@ public class TowerCtrl : MonoBehaviour
         }
     }
 
-    private void SetStrongestTarget()
+    protected override void SetStrongestTarget()
     {
         enemys = GameObject.FindGameObjectsWithTag("Enemy");
         List<GameObject> targetList = new List<GameObject>();
@@ -108,7 +90,7 @@ public class TowerCtrl : MonoBehaviour
         }
     }
 
-    private void AttackTarget()
+    protected override void AttackTarget()
     {
         if (target != null)
         {
