@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TowerDefence.unity
+- path: Assets/Scenes/Entrance.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
