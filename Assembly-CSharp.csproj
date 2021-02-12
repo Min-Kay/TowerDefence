@@ -81,7 +81,7 @@
     <Compile Include="Assets\2. Scripts\Common\MoneyChange.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonAttackObject.cs" />
     <Compile Include="Assets\2. Scripts\Tower\DarkWizardTower.cs" />
-    <Compile Include="Assets\2. Scripts\Tower\AttackObject\DarkWizard_Explosion.cs" />
+    <Compile Include="Assets\2. Scripts\Tower\AttackObject\Explosion_DarkWiard.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3. Assets\Forest road BG\READ_ME_\READ_ME_.txt" />

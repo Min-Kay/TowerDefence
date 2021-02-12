@@ -130,18 +130,6 @@ public class Enemy : MonoBehaviour
         spr.color = color;
     }
 
-
-    public void changeState(State state){
-        this.state = state;
-    }
-
-    private IEnumerator MoveAgain()
-    {
-        yield return new WaitForSeconds(2);
-        this.state = State.MOVE;
-        StartCoroutine(OnMove());
-    }
-
     private void SpawnEnemyHPSlider()
     {
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);

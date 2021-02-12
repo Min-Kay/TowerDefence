@@ -4,40 +4,41 @@ using UnityEngine;
 
 public class DarkWizardTower : TowerCtrl
 {
-    private GameObject explosion;
+
     public GameObject explosionObject;
+    private GameObject explosionTarget = null;
 
     private void Awake()
     {
         StartCoroutine(TowerAI());
-        StartCoroutine(Stun());
+        StartCoroutine(Explosion());
     }
 
     protected override IEnumerator TowerAI()
     {
-        while (!GameManager.instance.isGameOver)
+        while (!GameManager.instance.isGameOver || !GameManager.instance.isGameClear)
         {
             switch (mode)
             {
                 case AttackMode.FirstTarget:
                     SetFirstTarget();
-                    if (explosion != null)
+
+                    if (explosionTarget == null)
                     {
-                        Explosion();
-                        yield return null;
+                        explosionTarget = target;
                     }
                     else
                     {
                         AttackTarget();
                         yield return new WaitForSeconds(attackDelay);
                     }
+
                     break;
                 case AttackMode.StrongestTarget:
                     SetStrongestTarget();
-                    if (explosion != null)
+                    if (explosionTarget == null)
                     {
-                        Explosion();
-                        yield return null;
+                        explosionTarget = target;
                     }
                     else
                     {
@@ -52,13 +53,15 @@ public class DarkWizardTower : TowerCtrl
 
     private IEnumerator Explosion()
     {
-        while (!GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
+        while (!GameManager.instance.isGameOver)
         {
-            if (target != null)
+            if (explosionTarget != null)
             {
-                explosion = Instantiate(explosionObject, target.transform.position, target.transform.rotation);
-                Destroy(explosion, 3);
+                var explosion = Instantiate(explosionObject, explosionTarget.transform.position, explosionTarget.transform.rotation);
+                Destroy(explosion, 1f);
+                StartCoroutine(Cooldown2(skill2Delay));
                 yield return new WaitForSeconds(skill2Delay);
+                explosionTarget = null;
             }
             else
             {
@@ -67,19 +70,19 @@ public class DarkWizardTower : TowerCtrl
         }
     }
 
-    private IEnumerator Stun()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        while (!GameManager.instance.isGameOver && !GameManager.instance.isGameClear)
+        if (collision.tag == "Enemy")
         {
-            if (target != null)
-            {
-                target.GetComponent<Enemy>().changeState(Enemy.State.STOP);
-                yield return new WaitForSeconds(skill1Delay);
-            }
-            else
-            {
-                yield return null;
-            }
+            collision.GetComponent<Movement2D>().changeSpeed(0.7f);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<Movement2D>().initSpeed();
         }
     }
 }
