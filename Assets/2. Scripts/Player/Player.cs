@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player
 {
     private int hp;
     private int money;
+    private GameObject playerSkill1;
+    private GameObject playerSkill2;
     
     private Player()
     {
