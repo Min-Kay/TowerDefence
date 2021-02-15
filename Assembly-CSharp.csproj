@@ -64,11 +64,13 @@
     <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
     <Compile Include="Assets\2. Scripts\Entrance\Entrance.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
+    <Compile Include="Assets\2. Scripts\Common\Skills\Skill.cs" />
     <Compile Include="Assets\2. Scripts\UI\TooltipCtrl.cs" />
     <Compile Include="Assets\2. Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\2. Scripts\Tower\TowerBaseCtrl.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Movement2D.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\2. Scripts\UI\UnSelectedSkillButton.cs" />
     <Compile Include="Assets\2. Scripts\UI\SelectedSkillButton.cs" />
     <Compile Include="Assets\2. Scripts\UI\UiCtrl.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerUI.cs" />
@@ -77,15 +79,15 @@
     <Compile Include="Assets\2. Scripts\Tower\DarkWizardTower.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\Explosion_DarkWiard.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\AttackObject.cs" />
+    <Compile Include="Assets\2. Scripts\Common\Skills\ExampleSkill1.cs" />
     <Compile Include="Assets\2. Scripts\UI\SliderAutoPosition.cs" />
     <Compile Include="Assets\2. Scripts\Player\Player.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\EnemyHPViewer.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonBreath.cs" />
     <Compile Include="Assets\2. Scripts\Common\MoneyChange.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonAttackObject.cs" />
-    <Compile Include="Assets\2. Scripts\UI\UnSelectedSkillButton.cs" />
-    <Compile Include="Assets\2. Scripts\Common\Skills\Skill.cs" />
-    <Compile Include="Assets\2. Scripts\Common\Skills\ExampleSkill1.cs" />
+    <Compile Include="Assets\2. Scripts\UI\SkillListCanvas.cs" />
+    <Compile Include="Assets\2. Scripts\UI\CloseSkillList.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3. Assets\Forest road BG\READ_ME_\READ_ME_.txt" />
