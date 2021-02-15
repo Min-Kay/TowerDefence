@@ -220,6 +220,11 @@ public class UiCtrl : MonoBehaviour
         }
     }
 
+    public void GoToMenuButton()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void ExitButton()
     {
         #if UNITY_EDITOR

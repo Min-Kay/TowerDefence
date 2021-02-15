@@ -36,12 +36,17 @@ public class TowerSpawn : MonoBehaviour
             {
                 int cost = currentTower.GetComponent<TowerCtrl>().price;
 
-                if (hit.transform.CompareTag("Tile") && currentTower != null && cost<=Player.getInstance().getMoney())
+                if (hit.transform.CompareTag("Tile") && currentTower != null && cost <= Player.getInstance().getMoney() && hit.transform.GetComponent<Tile>().isAllow == true)
                 {
                     Player.getInstance().ChangeMoney(-cost);
                     moneyChanger.updateMoney();
                     towerSpawner.spawnTower(hit.transform, currentTower);
-                    ui.enabled = true; 
+                    ui.enabled = true;
+                    enabled = false;
+                }
+                else
+                {
+                    ui.enabled = true;
                     enabled = false;
                 }
             }
