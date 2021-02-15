@@ -11,6 +11,7 @@ TagManager:
   - Tower
   - Skill1
   - Skill2
+  - Stage
   layers:
   - Default
   - TransparentFX

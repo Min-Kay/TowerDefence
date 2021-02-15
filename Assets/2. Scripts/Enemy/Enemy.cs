@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
     private Color color;
     private SpriteRenderer spr;
     private UiCtrl ui;
+    private MainMenuUiCtrl mainui;
 
     [Header("Enemy Gold")]
     public int gold;
@@ -42,8 +43,16 @@ public class Enemy : MonoBehaviour
     {
         spr = GetComponent<SpriteRenderer>();
         ui = GetComponent<UiCtrl>();
+        mainui = GetComponent<MainMenuUiCtrl>();
         canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
-        HP = initHP;
+        if (true)//여기서 하드모드 선택했는지 씬사이의 정보전달 필요
+        {
+            HP = initHP*2;
+        }
+        else
+        {
+            HP = initHP;
+        }
         SpawnEnemyHPSlider();
     }
 
@@ -81,11 +90,7 @@ public class Enemy : MonoBehaviour
                 case State.STOP:
                     break;
                 case State.DIE:
-                    /*if (ui.isEnemyUiActive)
-                    {
-                        Debug.Log("타워메뉴띄우기");
-                        ui.ShowTowerMenu();
-                    }*/
+                    
                     GameManager.instance.currentEnemyCount--;
                     Player.getInstance().ChangeMoney(gold);
                     GameManager.instance.UpdateMoney();
@@ -125,29 +130,12 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            HP = 0;
             //GameManager.instance.currentEnemyCount--;
             Player.getInstance().damaged(attackPower);
             GameManager.instance.UpdateHP();
             //Destroy(this.gameObject);
             state = State.DIE;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if(collision.tag == "AttackObject" && collision.GetComponent<AttackObject>().targetEnemy == this.gameObject)
-        {
-            HP -= collision.GetComponent<AttackObject>().power;
-            if (HP <= 0)
-            {
-                collision.GetComponent<AttackObject>().fatherTower.GetComponent<TowerCtrl>().killCount++;
-            }
-            Destroy(collision.gameObject);
-            color = spr.color;
-            color.a = 0.4f;
-            spr.color = color;
-            Invoke("Damaged", 0.2f);
         }
     }
 

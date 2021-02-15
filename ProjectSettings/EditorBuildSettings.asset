@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/TowerDefence.unity
+    path: Assets/Scenes/Entrance.unity
+    guid: b5f2f81fba45f064982da4c1edca94fc
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 2d49376869b895045a1bfaa69a253053
+  - enabled: 1
+    path: Assets/Scenes/TowerDefence.unity
     guid: b83710d298cea62468f52de3999a3430
   m_configObjects: {}

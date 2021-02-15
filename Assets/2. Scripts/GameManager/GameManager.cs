@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [Header("Game State")]
-    public bool isGameStart = false;
+    public bool isGameStart = false; 
     public bool isGameOver = false;
-    public bool isGameClear = false;
+    public bool isGameClear = false; 
 
     [Header("Player")]
     public int playerHp;
@@ -30,18 +30,20 @@ public class GameManager : MonoBehaviour
     public int MaxWaveCount=0;//최대 웨이브수
     public int WaveCount = 0;//몇 웨이브
     public int currentEnemyCount;//현재 남은적수
+
+
     private WaveSystem wavesystem;
+
 
     private TowerCtrl rayTargetTower = null;
     private Enemy rayTargetEnemy = null;
-
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-        }
-        else if (instance != this)
+        }    
+        else if(instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour
             isGameOver = true;
             Time.timeScale = 0;
         }
-        else if((MaxWaveCount == WaveCount) && currentEnemyCount==0)
+        else if ((MaxWaveCount == WaveCount) && currentEnemyCount == 0)
         {
             isGameClear = true;
         }
@@ -72,8 +74,8 @@ public class GameManager : MonoBehaviour
             UpdateHP();
             isGameStart = true;
             WaveCount++;
-            StartCoroutine(SpawnEnemy());
-        }
+            StartCoroutine(SpawnEnemy()); 
+        } 
     }
 
     private IEnumerator SpawnEnemy()
@@ -84,18 +86,17 @@ public class GameManager : MonoBehaviour
         int halfcountplus = halfcount;//prefab종류가 다양해질때 더해질숫자
         while (!isGameOver && spawnEnemyCount < currentWave.maxEnemyCount)
         {
-
             if (currentWave.enemyPrefabs.Length > 1)
             {
-              
+
                 if (spawnEnemyCount <= halfcount)
                 {
-                    
+
                     if (spawnEnemyCount == halfcount && halfcount != currentWave.maxEnemyCount)
                     {
                         enemyIndex++;
                         halfcount = halfcount + halfcountplus;
-                        
+
                     }
 
                 }
@@ -117,7 +118,7 @@ public class GameManager : MonoBehaviour
     }
 
     public TowerCtrl targetTower
-    {
+    { 
         get
         {
             return rayTargetTower;
@@ -127,7 +128,6 @@ public class GameManager : MonoBehaviour
             rayTargetTower = value;
         }
     }
-
     public Enemy targetEnemy
     {
         get
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("MaxWaveCount"+ MaxWaveCount);
         //Debug.Log("WaveCount" + WaveCount);
-        WavePanel.updateWave(MaxWaveCount,WaveCount);
+        WavePanel.updateWave(MaxWaveCount, WaveCount);
     }
 
 }

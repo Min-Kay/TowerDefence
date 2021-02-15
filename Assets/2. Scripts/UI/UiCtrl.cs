@@ -25,9 +25,9 @@ public class UiCtrl : MonoBehaviour
     public GameObject win;
     public GameObject lose;
 
-    private TowerCtrl tower;
+    private TowerBaseCtrl tower;
     private bool isUiActive;
-    public bool isEnemyUiActive =false;
+    public bool isEnemyUiActive = false;
 
     [Header("Tower UI")]
     public Text towerName;
@@ -38,20 +38,27 @@ public class UiCtrl : MonoBehaviour
     public Text attackPower;
     public Text killCount;
     public Text mode;
-    public Image skill1 = null;
-    public Image skill2 = null;
+    public Image skill1;
+    public Image cooldown1;
+    public Image skill2;
+    public Image cooldown2;
 
     private Enemy enemy;
+
     [Header("Enemy UI")]
     public Text EnemyName;
     public Image Enemyimage;
     public Text EnemyHp;
     public Text EnemyattackPower;
     public Text EnemyGold;
+    public Image Enemyskill1;
+    public Image Enemycooldown1;
+    public Image Enemyskill2;
+    public Image Enemycooldown2;
 
     private int gameSpeed = 1;
 
-    void Start()
+    void Awake()
     {
         gameOver.gameObject.SetActive(false);
         ShowTowerMenu();
@@ -64,10 +71,8 @@ public class UiCtrl : MonoBehaviour
             if (isUiActive)
             {
                 SetTowerStatus();
-                //Debug.Log("타워UI띄우기");
             }
-
-            if(isEnemyUiActive)
+            if (isEnemyUiActive)
             {
                 SetEnemyStatus();
                 //Debug.Log("적UI띄우기");
@@ -76,7 +81,6 @@ public class UiCtrl : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 ShowTowerMenu();
-                //Debug.Log("타워메뉴띄우기");
             }
         }
         else
@@ -157,12 +161,18 @@ public class UiCtrl : MonoBehaviour
         mode.text = tower.mode.ToString();
         skill1.sprite = tower.skill1Sprite;
         skill2.sprite = tower.skill2Sprite;
+        cooldown1.sprite = tower.skill1Sprite;
+        cooldown2.sprite = tower.skill2Sprite;
+        InitCooldown(cooldown1);
+        InitCooldown(cooldown2);
+        cooldown1.fillAmount = tower.GetCooltime(1);
+        cooldown2.fillAmount = tower.GetCooltime(2);
     }
 
     public void SetEnemyStatus()
     {
         enemy = GameManager.instance.targetEnemy;
-        if(enemy.HP ==0)
+        if (enemy.HP == 0)
         {
             isEnemyUiActive = false;
             ShowTowerMenu();
@@ -175,7 +185,16 @@ public class UiCtrl : MonoBehaviour
             EnemyattackPower.text = "Damage : " + enemy.attackPower;
             EnemyGold.text = "Gold : " + enemy.gold;
         }
-        
+
+    }
+
+    void InitCooldown(Image skill)
+    {
+        skill.color = new Color(0, 0, 0, 0.6f);
+        skill.type = Image.Type.Filled;
+        skill.fillMethod = Image.FillMethod.Radial360;
+        skill.fillOrigin = (int)Image.Origin360.Top;
+        skill.fillClockwise = false;
     }
 
     public void ChangeTowerMode()
@@ -216,6 +235,7 @@ public class UiCtrl : MonoBehaviour
             GameManager.instance.UpdateMoney();
             ShowTowerMenu();
             Destroy(tower.gameObject);
+            GameManager.instance.targetTower = null;
         }
     }
 
@@ -267,10 +287,5 @@ public class UiCtrl : MonoBehaviour
     {
         SceneManager.LoadScene("TowerDefence");
     }
-
-    /*public void isEnemyActive(bool change)
-    {
-        isEnemyUiActive = change;
-    }*/
 }
 
