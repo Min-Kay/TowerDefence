@@ -28,5 +28,6 @@ public class Skill
 
         Player.getInstance().ChangeSkill(this, currentSkillName);
     } 
-
+    
+    protected virtual void ActiveSkill() { }
 }
