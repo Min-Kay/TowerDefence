@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("UI Controll")]
     public HpChanger hpPanel;
     public MoneyChange moneyPanel;
+    public WaveChanger wavePanel;
 
     [Header("Wave")]
     public int MaxWaveCount;//최대 웨이브수
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     private WaveSystem wavesystem;
 
     private TowerCtrl rayTargetTower = null;
+    private Enemy rayTargetEnemy = null;
 
     private void Awake()
     {
@@ -100,6 +102,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Enemy targetEnemy
+    {
+        get
+        {
+            return rayTargetEnemy;
+        }
+        set
+        {
+            rayTargetEnemy = value;
+        }
+    }
+
     public void UpdateHP()
     {
         hpPanel.updateHp(Player.getInstance().getHp());
@@ -110,6 +124,9 @@ public class GameManager : MonoBehaviour
         moneyPanel.updateMoney();
     }
 
-
+    public void UpdateWave()
+    {
+        wavePanel.updateWave(MaxWaveCount, WaveCount);
+    }
 
 }

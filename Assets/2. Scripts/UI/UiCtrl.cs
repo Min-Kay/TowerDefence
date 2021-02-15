@@ -19,6 +19,7 @@ public class UiCtrl : MonoBehaviour
     public Canvas towerMenu;
     public Canvas option;
     public Canvas gameOver;
+    public Canvas EnemyUi;
 
     [Header("Win Or Lose")]
     public GameObject win;
@@ -26,6 +27,7 @@ public class UiCtrl : MonoBehaviour
 
     private TowerBaseCtrl tower;
     private bool isUiActive;
+    public bool isEnemyUiActive = false;
 
     [Header("Tower UI")]
     public Text towerName;
@@ -40,6 +42,20 @@ public class UiCtrl : MonoBehaviour
     public Image cooldown1;
     public Image skill2;
     public Image cooldown2;
+
+    private Enemy enemy;
+
+    [Header("Enemy UI")]
+    public Text EnemyName;
+    public Image Enemyimage;
+    public Text EnemyHp;
+    public Text EnemyattackPower;
+    public Text EnemyGold;
+    public Image Enemyskill1;
+    public Image Enemycooldown1;
+    public Image Enemyskill2;
+    public Image Enemycooldown2;
+
 
     private int gameSpeed = 1;
 
@@ -57,6 +73,11 @@ public class UiCtrl : MonoBehaviour
             {
                 SetTowerStatus();
             }
+            if (isEnemyUiActive)
+            {
+                SetEnemyStatus();
+                //Debug.Log("ÀûUI¶ç¿ì±â");
+            }
 
             if (Input.GetMouseButtonDown(1))
             {
@@ -73,8 +94,20 @@ public class UiCtrl : MonoBehaviour
     {
         towerMenu.gameObject.SetActive(false);
         option.gameObject.SetActive(false);
+        EnemyUi.gameObject.SetActive(false);
         towerUi.gameObject.SetActive(true);
         isUiActive = true;
+        isEnemyUiActive = false;
+    }
+
+    public void ShowEnemyUi()
+    {
+        towerMenu.gameObject.SetActive(false);
+        option.gameObject.SetActive(false);
+        EnemyUi.gameObject.SetActive(true);
+        towerUi.gameObject.SetActive(false);
+        isEnemyUiActive = true;
+        isUiActive = false;
     }
 
     public void ShowTowerMenu()
@@ -82,8 +115,10 @@ public class UiCtrl : MonoBehaviour
         Time.timeScale = 1;
         towerUi.gameObject.SetActive(false);
         option.gameObject.SetActive(false);
+        EnemyUi.gameObject.SetActive(false);
         towerMenu.gameObject.SetActive(true);
         isUiActive = false;
+        isEnemyUiActive = false;
     }
 
     public void ShowOption()
@@ -91,14 +126,17 @@ public class UiCtrl : MonoBehaviour
         Time.timeScale = 0;
         towerUi.gameObject.SetActive(false);
         towerMenu.gameObject.SetActive(false);
+        EnemyUi.gameObject.SetActive(false);
         option.gameObject.SetActive(true);
         isUiActive = false;
+        isEnemyUiActive = false;
     }
 
     public void ShowGameOver()
     {
         gameOver.gameObject.SetActive(true);
         towerUi.gameObject.SetActive(false);
+        EnemyUi.gameObject.SetActive(false);
         option.gameObject.SetActive(false);
         towerMenu.gameObject.SetActive(false);
 
@@ -132,6 +170,25 @@ public class UiCtrl : MonoBehaviour
         InitCooldown(cooldown2);
         cooldown1.fillAmount = tower.GetCooltime(1);
         cooldown2.fillAmount = tower.GetCooltime(2);
+    }
+
+    public void SetEnemyStatus()
+    {
+        enemy = GameManager.instance.targetEnemy;
+        if (enemy == null)
+        {
+            isEnemyUiActive = false;
+            ShowTowerMenu();
+        }
+        else
+        {
+            EnemyName.text = enemy.name;
+            Enemyimage.sprite = enemy.GetComponent<SpriteRenderer>().sprite;
+            EnemyHp.text = "HP : " + enemy.HP;
+            EnemyattackPower.text = "Damage : " + enemy.attackPower;
+            EnemyGold.text = "Gold : " + enemy.gold;
+        }
+
     }
 
     void InitCooldown(Image skill)

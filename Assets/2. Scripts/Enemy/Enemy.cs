@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         MOVE,
         STOP,
+        END,
         DIE
     }
 
@@ -45,7 +46,7 @@ public class Enemy : MonoBehaviour
         SpawnEnemyHPSlider();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(HP<=0)
         {
@@ -77,11 +78,17 @@ public class Enemy : MonoBehaviour
                     break;
                 case State.STOP:
                     break;
-                case State.DIE:
+                case State.END:
+                    GameManager.instance.currentEnemyCount--;
+                    Player.getInstance().damaged(attackPower);
+                    GameManager.instance.UpdateHP();
                     Destroy(this.gameObject);
+                    break;
+                case State.DIE:
                     GameManager.instance.currentEnemyCount--;
                     Player.getInstance().ChangeMoney(gold);
                     GameManager.instance.UpdateMoney();
+                    Destroy(this.gameObject);
                     break;
             }
             yield return null;
@@ -117,10 +124,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            GameManager.instance.currentEnemyCount--;
-            Player.getInstance().damaged(attackPower);
-            GameManager.instance.UpdateHP();
-            Destroy(this.gameObject);
+            state = State.END;
         }
     }
 
