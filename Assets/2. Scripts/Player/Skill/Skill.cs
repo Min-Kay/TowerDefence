@@ -26,7 +26,7 @@ public class Skill
         this.skillImage = skillImage;
         this.skillCooltime = skillCooltime;
 
-        Player.getInstance().ChangeSkill(this, currentSkillName);
+        //Player.getInstance().ChangeSkill(this, currentSkillName);
     } 
     
     protected virtual void ActiveSkill() { }
