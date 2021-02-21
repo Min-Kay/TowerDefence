@@ -20,7 +20,7 @@ public class SelectedSkillButton : MonoBehaviour
     }
     public void changeSkill(Skill skill)
     {
-        GetComponentInChildren<Text>().text = skill.skillName;
+        GetComponent<Image>().sprite = skill.skillImage;
         this.skill = skill;
         skill.ChangeSkill(skill.skillName, skill.skillInfo, skill.skillImage, skill.skillCooltime);
     }

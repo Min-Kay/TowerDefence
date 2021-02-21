@@ -22,6 +22,7 @@ public class SkillManager {
     {
         skillMap = new Dictionary<string, Skill>();
         skillMap.Add("Passive_Sale", new Passive_Sale("sale", "disocunt tower cost", null, 0));
+        skillMap.Add("Passive_heart_button", new Passive_HeartBeat("heart", "When wave start, increase player hp", null, 0));
     }
 
     public GameObject getTargetButton()

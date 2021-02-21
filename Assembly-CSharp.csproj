@@ -62,7 +62,7 @@
     <Compile Include="Assets\2. Scripts\Tower\DragonTower.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerSpawn.cs" />
     <Compile Include="Assets\2. Scripts\UI\Tile.cs" />
-    <Compile Include="Assets\2. Scripts\UI\CloseSkillList.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Skill\CloseSkillList.cs" />
     <Compile Include="Assets\2. Scripts\Entrance\Entrance.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\WaveSystem.cs" />
     <Compile Include="Assets\2. Scripts\Player\Skill\Skill.cs" />
@@ -71,10 +71,11 @@
     <Compile Include="Assets\2. Scripts\Tower\TowerBaseCtrl.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Movement2D.cs" />
     <Compile Include="Assets\2. Scripts\Enemy\Enemy.cs" />
-    <Compile Include="Assets\2. Scripts\UI\UnSelectedSkillButton.cs" />
-    <Compile Include="Assets\2. Scripts\UI\SelectedSkillButton.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Skill\UnSelectedSkillButton.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Skill\SelectedSkillButton.cs" />
     <Compile Include="Assets\2. Scripts\UI\UiCtrl.cs" />
-    <Compile Include="Assets\2. Scripts\UI\SkillListCanvas.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Skill\SkillManager.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Skill\SkillListCanvas.cs" />
     <Compile Include="Assets\2. Scripts\UI\TowerUI.cs" />
     <Compile Include="Assets\2. Scripts\Common\HpChanger.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\BurnDamage.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonBreath.cs" />
     <Compile Include="Assets\2. Scripts\Common\MoneyChange.cs" />
     <Compile Include="Assets\2. Scripts\Tower\AttackObject\DragonAttackObject.cs" />
-    <Compile Include="Assets\2. Scripts\Player\Skill\SkillManager.cs" />
+    <Compile Include="Assets\2. Scripts\Player\Skill\Passive_HeartBeat.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\3. Assets\Forest road BG\READ_ME_\READ_ME_.txt" />

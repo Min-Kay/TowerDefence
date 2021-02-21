@@ -8,10 +8,10 @@ public class Skill
     [Header("Skill Property")]
     public string skillName;
     public string skillInfo;
-    public Image skillImage;
+    public Sprite skillImage;
     public float skillCooltime;
 
-    public Skill(string skillName, string skillInfo, Image skillImage, float skillCooltime)
+    public Skill(string skillName, string skillInfo, Sprite skillImage, float skillCooltime)
     {
         this.skillName = skillName;
         this.skillInfo = skillInfo;
@@ -19,7 +19,7 @@ public class Skill
         this.skillCooltime = skillCooltime;
     }
 
-    public void ChangeSkill(string skillName, string skillInfo, Image skillImage, float skillCooltime) {
+    public void ChangeSkill(string skillName, string skillInfo, Sprite skillImage, float skillCooltime) {
         var currentSkillName = this.skillName;
         this.skillName = skillName;
         this.skillInfo = skillInfo;
