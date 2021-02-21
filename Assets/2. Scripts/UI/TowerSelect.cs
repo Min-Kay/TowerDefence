@@ -16,7 +16,7 @@ public class TowerSelect : MonoBehaviour
     private void Start()
     {
         cost = GetComponentInChildren<Text>();
-        cost.text = tower.GetComponent<TowerCtrl>().price.ToString();
+        cost.text = tower.GetComponent<TowerCtrl>().getPrice().ToString();
     }
 
     public void TowerButtonClick()

@@ -60,6 +60,6 @@ public class TowerBaseCtrl : MonoBehaviour
 
     public virtual float GetCooltime(int i){ return 0; }
 
-
+    public virtual int getPrice() { return 0; }
 }
 

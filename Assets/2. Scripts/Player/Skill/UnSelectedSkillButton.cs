@@ -14,7 +14,6 @@ public class UnSelectedSkillButton : MonoBehaviour
     private void Start()
     {
         skill = SkillManager.getInstance().getSkill(skillName);
-        GetComponentInChildren<Text>().text = skillName;
     }
 
     public void ChangeSelectedSkill()
