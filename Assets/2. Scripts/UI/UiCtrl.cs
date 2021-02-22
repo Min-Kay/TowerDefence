@@ -56,6 +56,7 @@ public class UiCtrl : MonoBehaviour
     public Image Enemyskill2;
     public Image Enemycooldown2;
 
+
     private int gameSpeed = 1;
 
     void Awake()
@@ -108,6 +109,7 @@ public class UiCtrl : MonoBehaviour
         isEnemyUiActive = true;
         isUiActive = false;
     }
+
     public void ShowTowerMenu()
     {
         Time.timeScale = 1;
@@ -127,14 +129,15 @@ public class UiCtrl : MonoBehaviour
         EnemyUi.gameObject.SetActive(false);
         option.gameObject.SetActive(true);
         isUiActive = false;
+        isEnemyUiActive = false;
     }
 
     public void ShowGameOver()
     {
         gameOver.gameObject.SetActive(true);
         towerUi.gameObject.SetActive(false);
-        option.gameObject.SetActive(false);
         EnemyUi.gameObject.SetActive(false);
+        option.gameObject.SetActive(false);
         towerMenu.gameObject.SetActive(false);
 
         if (GameManager.instance.isGameOver)
@@ -172,7 +175,7 @@ public class UiCtrl : MonoBehaviour
     public void SetEnemyStatus()
     {
         enemy = GameManager.instance.targetEnemy;
-        if (enemy.HP == 0)
+        if (enemy == null)
         {
             isEnemyUiActive = false;
             ShowTowerMenu();
@@ -184,6 +187,15 @@ public class UiCtrl : MonoBehaviour
             EnemyHp.text = "HP : " + enemy.HP;
             EnemyattackPower.text = "Damage : " + enemy.attackPower;
             EnemyGold.text = "Gold : " + enemy.gold;
+            Enemyskill1.sprite = enemy.skill1Sprite;
+            Enemyskill2.sprite = enemy.skill2Sprite;
+            Enemycooldown1.sprite = enemy.skill1Sprite;
+            Enemycooldown2.sprite = enemy.skill2Sprite;
+            InitCooldown(Enemycooldown1);
+            InitCooldown(Enemycooldown2);
+            Enemycooldown1.fillAmount = enemy.GetCooltime(1);
+            Enemycooldown2.fillAmount = enemy.GetCooltime(2);
+            //enemy안에 GetCooltime 만들기
         }
 
     }
@@ -274,10 +286,16 @@ public class UiCtrl : MonoBehaviour
         }
     }
 
+    public void GoToMenuButton()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void ExitButton()
     {
         #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
+                //UnityEditor.EditorApplication.isPlaying = false;
+                SceneManager.LoadScene("Main");
         #else
                UnityEngine.Application.Quit();
         #endif

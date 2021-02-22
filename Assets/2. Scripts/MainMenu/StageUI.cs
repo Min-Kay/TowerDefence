@@ -21,11 +21,12 @@ public class StageUI : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-
+        
         if (hit && hit.transform.tag == "Stage")
         {
-            //GameManager.instance.targetTower = hit.transform.GetComponent<TowerCtrl>();
-            //ui.ShowTowerUi();
+            //Debug.Log("targetStage °ª³ÖÀ½");
+            ui.targetStage = hit.transform.GetComponent<Stage>();
+            ui.ShowStageUi(); 
         }
     }
 }

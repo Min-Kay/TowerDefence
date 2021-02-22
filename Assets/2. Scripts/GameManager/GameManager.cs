@@ -24,19 +24,19 @@ public class GameManager : MonoBehaviour
     [Header("UI Controll")]
     public HpChanger hpPanel;
     public MoneyChange moneyPanel;
-    public WaveChanger WavePanel;
+    public WaveChanger wavePanel;
 
     [Header("Wave")]
-    public int MaxWaveCount=0;//최대 웨이브수
+    public int MaxWaveCount;//최대 웨이브수
     public int WaveCount = 0;//몇 웨이브
     public int currentEnemyCount;//현재 남은적수
 
-
     private WaveSystem wavesystem;
-
 
     private TowerCtrl rayTargetTower = null;
     private Enemy rayTargetEnemy = null;
+    private MainMenuUiCtrl mainmenuui;
+
     private void Awake()
     {
         if (instance == null)
@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         wavesystem = GetComponent<WaveSystem>();
+        mainmenuui = GetComponent<MainMenuUiCtrl>();
         MaxWaveCount = wavesystem.waves.Length;//최대웨이브 추가
         //DontDestroyOnLoad(this.gameObject);
     }
@@ -62,6 +63,18 @@ public class GameManager : MonoBehaviour
         else if ((MaxWaveCount == WaveCount) && currentEnemyCount == 0)
         {
             isGameClear = true;
+            if (Stagemode.instance.choosenumber == 1)
+            {
+                Stagemode.instance.clearmap1= true;
+            }
+            else if (Stagemode.instance.choosenumber == 2)
+            {
+                Stagemode.instance.clearmap2 = true;
+            }
+            else if (Stagemode.instance.choosenumber == 3)
+            {
+                Stagemode.instance.clearmap3 = true;
+            }
         }
     }
 
@@ -128,6 +141,7 @@ public class GameManager : MonoBehaviour
             rayTargetTower = value;
         }
     }
+
     public Enemy targetEnemy
     {
         get
@@ -139,6 +153,7 @@ public class GameManager : MonoBehaviour
             rayTargetEnemy = value;
         }
     }
+
     public void UpdateHP()
     {
         hpPanel.updateHp(Player.getInstance().getHp());
@@ -151,9 +166,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateWave()
     {
-        //Debug.Log("MaxWaveCount"+ MaxWaveCount);
-        //Debug.Log("WaveCount" + WaveCount);
-        WavePanel.updateWave(MaxWaveCount, WaveCount);
+        wavePanel.updateWave(MaxWaveCount, WaveCount);
     }
 
 }

@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     private int hp;
     private int money;
+    private Skill playerSkill1;
+    private Skill playerSkill2;
     
     private Player()
     {
@@ -40,5 +42,17 @@ public class Player : MonoBehaviour
     public void damaged(int damage)
     {
         this.hp -= damage;
+    }
+
+    public void ChangeSkill(Skill skill, string name)
+    {
+        if (name == playerSkill1.skillName)
+        {
+            playerSkill1 = skill;
+        }
+        else if (name == playerSkill2.skillName)
+        {
+            playerSkill2 = skill;
+        }
     }
 }

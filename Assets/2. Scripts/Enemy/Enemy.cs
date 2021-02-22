@@ -17,35 +17,48 @@ public class Enemy : MonoBehaviour
     public GameObject enemyHPSliderPrefab;// 적체력나타내는 Slider UI 프리팹
     public float angleOffset;
 
-    private Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
+    public Transform canvasTransform;//UI 표현하는 canvas 오브젝트 위치
 
-    private int wayPointCount;//이동경로 갯수
-    private Transform[] wayPoints;//이동경로 정보
-    private int currentIndex = 0;
-    private Movement2D movement2D;
+    public int wayPointCount;//이동경로 갯수
+    public Transform[] wayPoints;//이동경로 정보
+    public int currentIndex = 0;
+    public Movement2D movement2D;
 
-    private Color color;
-    private SpriteRenderer spr;
-    private UiCtrl ui;
-    private MainMenuUiCtrl mainui;
+    public Color color;
+    public SpriteRenderer spr;
 
     [Header("Enemy Gold")]
     public int gold;
+
+    [Header("Skill 1 Info")]
+    public string skill1Name;
+    public Sprite skill1Sprite;
+    public float skill1Delay;
+    protected float skill1CoolTime = 0;
+    [TextArea]
+    public string skill1Tooltip;
+
+    [Header("Skill 2 Info")]
+    public string skill2Name;
+    public Sprite skill2Sprite;
+    public float skill2Delay;
+    protected float skill2CoolTime = 0;
+    [TextArea]
+    public string skill2Tooltip;
 
     public enum State
     {
         MOVE,
         STOP,
+        END,
         DIE
     }
 
     private void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
-        ui = GetComponent<UiCtrl>();
-        mainui = GetComponent<MainMenuUiCtrl>();
         canvasTransform = GameObject.FindWithTag("Canvas").GetComponent<Transform>();
-        if (true)//여기서 하드모드 선택했는지 씬사이의 정보전달 필요
+        if(Stagemode.instance.isHardmode)
         {
             HP = initHP*2;
         }
@@ -53,14 +66,14 @@ public class Enemy : MonoBehaviour
         {
             HP = initHP;
         }
+        
         SpawnEnemyHPSlider();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(HP<=0)
         {
-            HP = 0;
             state = State.DIE;
         }
     }
@@ -79,7 +92,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(OnMove());
     }
 
-    IEnumerator EnemyAI()
+    protected virtual IEnumerator EnemyAI()
     {
         while(!GameManager.instance.isGameOver)
         {
@@ -89,8 +102,13 @@ public class Enemy : MonoBehaviour
                     break;
                 case State.STOP:
                     break;
+                case State.END:
+                    GameManager.instance.currentEnemyCount--;
+                    Player.getInstance().damaged(attackPower);
+                    GameManager.instance.UpdateHP();
+                    Destroy(this.gameObject);
+                    break;
                 case State.DIE:
-                    
                     GameManager.instance.currentEnemyCount--;
                     Player.getInstance().ChangeMoney(gold);
                     GameManager.instance.UpdateMoney();
@@ -101,7 +119,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private IEnumerator OnMove()
+    protected virtual IEnumerator OnMove()
     {
         NextMoveTo();
 
@@ -115,7 +133,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void NextMoveTo()
+    protected virtual void NextMoveTo()
     {
         if (currentIndex < wayPointCount - 1)
         {
@@ -130,27 +148,60 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            HP = 0;
-            //GameManager.instance.currentEnemyCount--;
-            Player.getInstance().damaged(attackPower);
-            GameManager.instance.UpdateHP();
-            //Destroy(this.gameObject);
-            state = State.DIE;
+            
+            state = State.END;
         }
     }
 
-    private void Damaged()
+    protected virtual void Damaged()
     {
+        color = spr.color;
+        color.a = 0.4f;
+        spr.color = color;
+        //0.2초 기다리기
         color.a = 1.0f;
         spr.color = color;
     }
 
-    private void SpawnEnemyHPSlider()
+    protected virtual void SpawnEnemyHPSlider()
     {
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);
         sliderClone.transform.SetParent(canvasTransform);
         sliderClone.transform.localScale = Vector3.one;
         sliderClone.GetComponent<SliderAutoPosition>().Setup(this.transform);
         sliderClone.GetComponent<EnemyHPViewer>().Setup(this.GetComponent<Enemy>());
+    }
+
+    protected virtual IEnumerator EnemyCooldown1(float duration) 
+    {
+        skill1CoolTime = 1;
+        while (skill1CoolTime > 0)
+        {
+            skill1CoolTime -= 1 * Time.smoothDeltaTime / duration;
+            yield return null;
+        }
+    }
+    protected virtual IEnumerator EnemyCooldown2(float duration) 
+    {
+        skill2CoolTime = 1;
+        while (skill2CoolTime > 0)
+        {
+            skill2CoolTime -= 1 * Time.smoothDeltaTime / duration;
+            yield return null;
+        }
+    }
+
+    public virtual float GetCooltime(int i) 
+    {
+        if (i == 1)
+        {
+            return skill1CoolTime;
+        }
+        else if (i == 2)
+        {
+            return skill2CoolTime;
+        }
+        else
+            return 0;
     }
 }

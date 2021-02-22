@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8099606755935334256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
   attackDelay: 1
   mode: 0
   power: 5
-  speed: 20
-  distance: 10
+  speed: 15
+  distance: 5
   skill1Name: Dragon's Breath
   skill1Sprite: {fileID: 21300000, guid: 073b32417b155d145a483aae6b2b5e0b, type: 3}
   skill1Delay: 5
@@ -145,5 +145,5 @@ MonoBehaviour:
   skill2Delay: 0
   skill2Tooltip: Dragon's skill & normal attack give target a burn
   flamePrefab: {fileID: 8480803569222882197, guid: 1227b28a5d2dfa6468b40c045f9a3e4a, type: 3}
-  skill1Distance: 7
+  skill1Distance: 5
   skill1Duration: 5

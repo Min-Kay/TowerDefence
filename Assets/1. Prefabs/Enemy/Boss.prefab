@@ -13,11 +13,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
       propertyPath: initHP
-      value: 200
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill1Name
+      value: Angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill2Name
+      value: Hard
       objectReference: {fileID: 0}
     - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
       propertyPath: attackPower
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill1Delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 375ee62ad61061949a70201740c93ba6, type: 3}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill2Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e57a2254b77eb144aabe8b71c0a051ba, type: 3}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill1Tooltip
+      value: Anger increases your speed instantly
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+      propertyPath: skill2Tooltip
+      value: "Boss is made of a hard shell\r. so Take less damage"
       objectReference: {fileID: 0}
     - target: {fileID: 2809039182913640644, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
       propertyPath: m_Sprite
@@ -25,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: dfe2da12be5f5994286f281b2cde6656, type: 3}
     - target: {fileID: 2949637535794731315, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
       propertyPath: moveSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3518654415346746688, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

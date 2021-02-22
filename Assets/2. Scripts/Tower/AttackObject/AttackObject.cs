@@ -18,6 +18,7 @@ public class AttackObject : MonoBehaviour
     [HideInInspector]
     public GameObject fatherTower = null; //공격 매개체를 소환한 타워 
 
+    private Color color;
     private void Start()
     {
         power = fatherTower.GetComponent<TowerCtrl>().power;
@@ -41,6 +42,7 @@ public class AttackObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject == targetEnemy)
         {
             collision.GetComponent<Enemy>().HP -= power;
@@ -48,6 +50,9 @@ public class AttackObject : MonoBehaviour
             {
                 fatherTower.GetComponent<TowerBaseCtrl>().killCount++;
             }
+            color = collision.GetComponent<Enemy>().spr.color;
+            color.a = 0.4f;
+            collision.GetComponent<Enemy>().spr.color = color;
             collision.GetComponent<Enemy>().Invoke("Damaged", 0.2f);
             Destroy(gameObject);
         }

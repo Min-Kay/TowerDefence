@@ -12,8 +12,6 @@ public class WaveChanger : MonoBehaviour
     }
     public void updateWave(int MaxWave, int Wavecount)
     {
-        //Wave.text = Wave.ToString();
         WaveText.text = (Wavecount + 1 + "/" + MaxWave).ToString();
-
     }
 }
