@@ -35,8 +35,6 @@ public class GameManager : MonoBehaviour
 
     private TowerCtrl rayTargetTower = null;
     private Enemy rayTargetEnemy = null;
-    private MainMenuUiCtrl mainmenuui;
-
     private void Awake()
     {
         if (instance == null)
@@ -48,7 +46,6 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         wavesystem = GetComponent<WaveSystem>();
-        mainmenuui = GetComponent<MainMenuUiCtrl>();
         MaxWaveCount = wavesystem.waves.Length;//최대웨이브 추가
         //DontDestroyOnLoad(this.gameObject);
     }
@@ -65,15 +62,54 @@ public class GameManager : MonoBehaviour
             isGameClear = true;
             if (Stagemode.instance.choosenumber == 1)
             {
-                Stagemode.instance.clearmap1= true;
+                if(Stagemode.instance.isHardmode)
+                {
+                    Stagemode.instance.clearhardmap1 = true;
+                    Debug.Log("하드클리어");
+                }
+                else
+                {
+                    Stagemode.instance.clearnormalmap1 = true;
+                    Debug.Log("노말클리어");
+                }
+                
+                if(playerHp == Player.getInstance().getHp())
+                {
+                    Stagemode.instance.clearmap1nodamage = true;
+                    //Debug.Log("노피격클리어");
+                }
             }
             else if (Stagemode.instance.choosenumber == 2)
             {
-                Stagemode.instance.clearmap2 = true;
+                if (Stagemode.instance.isHardmode)
+                {
+                    Stagemode.instance.clearhardmap2 = true;
+                }
+                else
+                {
+                    Stagemode.instance.clearnormalmap2 = true;
+                }
+
+                if (playerHp == Player.getInstance().getHp())
+                {
+                    Stagemode.instance.clearmap2nodamage = true;
+                }
             }
             else if (Stagemode.instance.choosenumber == 3)
             {
-                Stagemode.instance.clearmap3 = true;
+                if (Stagemode.instance.isHardmode)
+                {
+                    Stagemode.instance.clearhardmap3 = true;
+                }
+                else
+                {
+                    Stagemode.instance.clearnormalmap3 = true;
+                }
+
+                if (playerHp == Player.getInstance().getHp())
+                {
+                    Stagemode.instance.clearmap3nodamage = true;
+                }
             }
         }
     }
@@ -83,6 +119,7 @@ public class GameManager : MonoBehaviour
         currentWave = wave;
         if (!isGameStart)
         {
+            
             UpdateMoney();
             UpdateHP();
             isGameStart = true;

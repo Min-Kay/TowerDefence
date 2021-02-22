@@ -109,7 +109,25 @@ public class MainMenuUiCtrl : MonoBehaviour
         stagenumber = stage.stagenumber;
         Stagemode.instance.choosenumber = stagenumber;
         //Debug.Log("클리어검사중" + stagenumber + Stagemode.instance.Mapclear(stagenumber));
-        if (Stagemode.instance.Mapclear(stagenumber))//게임클리어후
+        if (Stagemode.instance.Mapclear(stagenumber) == 1)//게임클리어후
+        {
+            fullstar1.gameObject.SetActive(true);
+            fullstar2.gameObject.SetActive(false);
+            fullstar3.gameObject.SetActive(false);
+            emptystar1.gameObject.SetActive(false);
+            emptystar2.gameObject.SetActive(true);
+            emptystar3.gameObject.SetActive(true);
+        }
+        else if (Stagemode.instance.Mapclear(stagenumber) == 2)
+        {
+            fullstar1.gameObject.SetActive(true);
+            fullstar2.gameObject.SetActive(true);
+            fullstar3.gameObject.SetActive(false);
+            emptystar1.gameObject.SetActive(false);
+            emptystar2.gameObject.SetActive(false);
+            emptystar3.gameObject.SetActive(true);
+        }
+        else if (Stagemode.instance.Mapclear(stagenumber) == 3)
         {
             fullstar1.gameObject.SetActive(true);
             fullstar2.gameObject.SetActive(true);

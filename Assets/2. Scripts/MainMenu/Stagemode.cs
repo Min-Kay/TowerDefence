@@ -8,9 +8,15 @@ public class Stagemode : MonoBehaviour
     public int choosenumber;
     public static Stagemode instance = null;
 
-    public bool clearmap1 = false;
-    public bool clearmap2 = false;
-    public bool clearmap3 = false;
+    public bool clearnormalmap1 = false;
+    public bool clearhardmap1 = false;
+    public bool clearmap1nodamage = false;
+    public bool clearnormalmap2 = false;
+    public bool clearhardmap2 = false;
+    public bool clearmap2nodamage = false;
+    public bool clearnormalmap3 = false;
+    public bool clearhardmap3 = false;
+    public bool clearmap3nodamage = false;
     void Awake()
     {
         if (instance != null)
@@ -30,22 +36,59 @@ public class Stagemode : MonoBehaviour
 
 
 
-    public bool Mapclear(int number)
+    public int Mapclear(int number)
     {
-        if (number == 1 && clearmap1)
+        int star=0;
+        if (number == 1)
         {
-            return true;
+            if (clearnormalmap1)
+            {
+                star++;
+            }
+            if (clearhardmap1)
+            {
+                star++;
+            }
+            if (clearmap1nodamage)
+            {
+                star++;
+            }
+            return star;
         }
-        else if (number == 2 && clearmap2)
+        else if (number == 2)
         {
-            return true;
+            if (clearnormalmap2)
+            {
+                star++;
+            }
+            if (clearhardmap2)
+            {
+                star++;
+            }
+            if (clearmap2nodamage)
+            {
+                star++;
+            }
+            return star;
         }
-        else if (number == 3 && clearmap3)
+        else if (number == 3)
         {
-            return true;
+            if (clearnormalmap3)
+            {
+                star++;
+            }
+            if (clearhardmap3)
+            {
+                star++;
+            }
+            if (clearmap3nodamage)
+            {
+                star++;
+            }
+            return star;
         }
         else
-            return false;
+            return star;
 
     }
 }

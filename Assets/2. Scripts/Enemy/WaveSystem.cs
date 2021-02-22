@@ -15,6 +15,7 @@ public class WaveSystem : MonoBehaviour
     {
         if(currentWaveIndex < waves.Length-1 && enemySpawner.currentEnemyCount == 0)
         {
+            //GameManager.instance.resetpoint = true;
             GameManager.instance.UpdateWave();
             currentWaveIndex++;
             enemySpawner.isGameStart = false;

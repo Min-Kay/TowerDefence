@@ -39,6 +39,16 @@ public class Player : MonoBehaviour
         return hp;
     }
     
+    public void setMoney(int Money)
+    {
+        money = Money;
+    }
+
+    public void setHP(int HP)
+    {
+        hp = HP;
+    }
+
     public void damaged(int damage)
     {
         this.hp -= damage;

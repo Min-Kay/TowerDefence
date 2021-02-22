@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     public Color color;
     public SpriteRenderer spr;
-
+    public bool isBoss = false;
     [Header("Enemy Gold")]
     public int gold;
 
@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Setup(GameManager gameManager, Transform[] wayPoints)
+    public virtual void Setup(GameManager gameManager, Transform[] wayPoints)
     {
         movement2D = GetComponent<Movement2D>();
 
@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(OnMove());
     }
 
-    protected virtual IEnumerator EnemyAI()
+    protected IEnumerator EnemyAI()
     {
         while(!GameManager.instance.isGameOver)
         {
@@ -119,10 +119,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual IEnumerator OnMove()
+    protected IEnumerator OnMove()
     {
         NextMoveTo();
-
+        //Debug.Log("움직이는중!");
         while (state == State.MOVE)
         {
             if (Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.02f * movement2D.moveSpeed)
@@ -133,7 +133,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void NextMoveTo()
+    protected void NextMoveTo()
     {
         if (currentIndex < wayPointCount - 1)
         {
@@ -153,7 +153,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void Damaged()
+    protected void Damaged()
     {
         color = spr.color;
         color.a = 0.4f;
@@ -163,7 +163,7 @@ public class Enemy : MonoBehaviour
         spr.color = color;
     }
 
-    protected virtual void SpawnEnemyHPSlider()
+    protected void SpawnEnemyHPSlider()
     {
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);
         sliderClone.transform.SetParent(canvasTransform);
@@ -172,7 +172,7 @@ public class Enemy : MonoBehaviour
         sliderClone.GetComponent<EnemyHPViewer>().Setup(this.GetComponent<Enemy>());
     }
 
-    protected virtual IEnumerator EnemyCooldown1(float duration) 
+    protected IEnumerator EnemyCooldown1(float duration) 
     {
         skill1CoolTime = 1;
         while (skill1CoolTime > 0)
@@ -181,7 +181,7 @@ public class Enemy : MonoBehaviour
             yield return null;
         }
     }
-    protected virtual IEnumerator EnemyCooldown2(float duration) 
+    protected IEnumerator EnemyCooldown2(float duration) 
     {
         skill2CoolTime = 1;
         while (skill2CoolTime > 0)
@@ -191,7 +191,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public virtual float GetCooltime(int i) 
+    public float GetCooltime(int i) 
     {
         if (i == 1)
         {

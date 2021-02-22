@@ -1,5 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8106176677745373233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083310026946903527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd03aa3588791254ebbd4cca6ef088e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  initHP: 160
+  HP: 0
+  attackPower: 20
+  enemyHPSliderPrefab: {fileID: 6702318059884948026, guid: 62db1e0120480024aa3f066a65261fbe, type: 3}
+  angleOffset: -90
+  canvasTransform: {fileID: 0}
+  wayPointCount: 0
+  wayPoints: []
+  currentIndex: 0
+  movement2D: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  spr: {fileID: 0}
+  gold: 50
+  skill1Name: Angry
+  skill1Sprite: {fileID: 21300000, guid: 375ee62ad61061949a70201740c93ba6, type: 3}
+  skill1Delay: 3
+  skill1Tooltip: Anger increases your speed instantly
+  skill2Name: Hard
+  skill2Sprite: {fileID: 21300000, guid: 158843b32dd7620488db9f8eb5c38c85, type: 3}
+  skill2Delay: 0
+  skill2Tooltip: "Boss is made of a hard shell\r so Take less damage"
 --- !u!1001 &4805810905056346979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,5 +145,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2243524939560292544, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+--- !u!1 &8083310026946903527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3646794377236381316, guid: 1f4983c0c66548648bff478b812a1e5a, type: 3}
+  m_PrefabInstance: {fileID: 4805810905056346979}
+  m_PrefabAsset: {fileID: 0}

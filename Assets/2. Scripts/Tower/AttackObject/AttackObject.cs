@@ -45,7 +45,15 @@ public class AttackObject : MonoBehaviour
 
         if (collision.gameObject == targetEnemy)
         {
-            collision.GetComponent<Enemy>().HP -= power;
+            if (collision.GetComponent<Enemy>().isBoss)
+            {
+                collision.GetComponent<Enemy>().HP -= (power-5);
+            }
+            else
+            {
+                collision.GetComponent<Enemy>().HP -= power;
+            }
+            
             if (collision.GetComponent<Enemy>().HP <= 0)
             {
                 fatherTower.GetComponent<TowerBaseCtrl>().killCount++;

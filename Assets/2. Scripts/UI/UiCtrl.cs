@@ -289,6 +289,8 @@ public class UiCtrl : MonoBehaviour
     public void GoToMenuButton()
     {
         SceneManager.LoadScene("Main");
+        Player.getInstance().setHP(GameManager.instance.playerHp);
+        Player.getInstance().setMoney(GameManager.instance.playerMoney);
     }
 
     public void ExitButton()
@@ -296,6 +298,8 @@ public class UiCtrl : MonoBehaviour
         #if UNITY_EDITOR
                 //UnityEditor.EditorApplication.isPlaying = false;
                 SceneManager.LoadScene("Main");
+                Player.getInstance().setHP(GameManager.instance.playerHp);
+                Player.getInstance().setMoney(GameManager.instance.playerMoney);
         #else
                UnityEngine.Application.Quit();
         #endif
@@ -303,7 +307,7 @@ public class UiCtrl : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("TowerDefence");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 
