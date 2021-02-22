@@ -54,4 +54,28 @@ public class Player
             playerSkill2 = skill;
         }
     }
+
+    public bool HasSkill(string name)
+    {
+        if(name == playerSkill1.skillName)
+        {
+            return true;
+        }else if(name == playerSkill2.skillName)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public Skill getSkill(string name)
+    {
+        if (name == playerSkill1.skillName)
+        {
+            return playerSkill1;
+        }
+        else
+        {
+            return playerSkill2;
+        }
+    }
 }

@@ -136,7 +136,7 @@ MonoBehaviour:
   speed: 20
   distance: 10
   skill1Name: Slow
-  skill1Sprite: {fileID: 0}
+  skill1Sprite: {fileID: 21300000, guid: d4f72c0adc95f224fa6e06cdb601a048, type: 3}
   skill1Delay: 0
   skill1Tooltip: "Passive Skill \nEnemy speed down in attack range"
   skill2Name: Explosion

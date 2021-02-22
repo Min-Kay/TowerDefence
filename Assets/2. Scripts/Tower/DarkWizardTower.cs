@@ -5,11 +5,14 @@ using UnityEngine;
 public class DarkWizardTower : TowerCtrl
 {
 
+    public AudioClip clip;
     public GameObject explosionObject;
     private GameObject explosionTarget = null;
+    private AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
         StartCoroutine(TowerAI());
         StartCoroutine(Explosion());
     }
@@ -58,6 +61,7 @@ public class DarkWizardTower : TowerCtrl
             if (explosionTarget != null)
             {
                 var explosion = Instantiate(explosionObject, explosionTarget.transform.position, explosionTarget.transform.rotation);
+                PlayEffect();
                 Destroy(explosion, 1f);
                 StartCoroutine(Cooldown2(skill2Delay));
                 yield return new WaitForSeconds(skill2Delay);
@@ -84,5 +88,10 @@ public class DarkWizardTower : TowerCtrl
         {
             collision.GetComponent<Movement2D>().initSpeed();
         }
+    }
+    
+    private void PlayEffect()
+    {
+        audioSource.PlayOneShot(clip);
     }
 }

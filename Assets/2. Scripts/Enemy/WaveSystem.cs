@@ -15,6 +15,10 @@ public class WaveSystem : MonoBehaviour
     {
         if(currentWaveIndex < waves.Length-1)
         {
+            if (Player.getInstance().HasSkill("Passive_HeartBeat"))
+            {
+                Player.getInstance().getSkill("Passive_HeartBeat").PassiveSkill(0);
+            }
             currentWaveIndex++;
             enemySpawner.isGameStart = false;
             enemySpawner.GameStart(waves[currentWaveIndex]);

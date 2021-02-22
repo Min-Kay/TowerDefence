@@ -133,4 +133,13 @@ public class TowerCtrl : TowerBaseCtrl
         else
             return 0;
     }
+
+    public override int getPrice()
+    {
+        if (Player.getInstance().HasSkill("Passive_Sale"))
+        {
+            return (int)Player.getInstance().getSkill("Passive_Sale").PassiveSkill(this.price);
+        }
+        return this.price;
+    }
 }

@@ -34,7 +34,7 @@ public class TowerSpawn : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                int cost = currentTower.GetComponent<TowerCtrl>().price;
+                int cost = currentTower.GetComponent<TowerCtrl>().getPrice();
 
                 if (hit.transform.CompareTag("Tile") && currentTower != null && cost<=Player.getInstance().getMoney())
                 {
