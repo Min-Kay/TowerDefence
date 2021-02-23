@@ -307,6 +307,8 @@ public class UiCtrl : MonoBehaviour
 
     public void RestartButton()
     {
+        Player.getInstance().setHP(GameManager.instance.playerHp);
+        Player.getInstance().setMoney(GameManager.instance.playerMoney);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

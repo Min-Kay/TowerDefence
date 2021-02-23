@@ -125,7 +125,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log("움직이는중!");
         while (state == State.MOVE)
         {
-            if (Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.02f * movement2D.moveSpeed)
+            if (Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.05f * movement2D.moveSpeed)
             {
                 NextMoveTo();
             }

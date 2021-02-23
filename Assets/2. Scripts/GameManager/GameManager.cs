@@ -65,12 +65,12 @@ public class GameManager : MonoBehaviour
                 if(Stagemode.instance.isHardmode)
                 {
                     Stagemode.instance.clearhardmap1 = true;
-                    Debug.Log("하드클리어");
+                    //Debug.Log("하드클리어");
                 }
                 else
                 {
                     Stagemode.instance.clearnormalmap1 = true;
-                    Debug.Log("노말클리어");
+                    //Debug.Log("노말클리어");
                 }
                 
                 if(playerHp == Player.getInstance().getHp())
